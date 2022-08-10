@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using UnityCore.Scene;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
@@ -28,6 +29,7 @@ public class ZoomInOutPopUp : ZoomBehaviour
         originalSize = Vector3.one;
         m_RectTransfrom = GetComponent<RectTransform>();
         m_CanvasGroup = GetComponent<CanvasGroup>();
+        SceneController.OnSceneChange += ResetPopUp;
 
         ResetPopUp();
     }
@@ -65,6 +67,7 @@ public class ZoomInOutPopUp : ZoomBehaviour
                 yield return 0;
             }
 
+            m_CanvasGroup.DOFade(1, animationSpeed);
             for (int i = 0; i < animScaleFactors.Count * 2 && m_RectTransfrom != null; i++)
             {
                 if ((i + 1) % 2 == 0)
@@ -100,16 +103,16 @@ public class ZoomInOutPopUp : ZoomBehaviour
         m_RectTransfrom.DOKill();
     }
 
-    private void OnDisable()
-    {
-        ResetPopUp();
-    }
-
     public void ResetPopUp()
     {
         StopPopUpAnimation();
         StopComponentsAnimation();
         DOTween.KillAll();
+    }
+
+    private void OnDisable()
+    {
+        SceneController.OnSceneChange -= ResetPopUp;
     }
 
     #endregion

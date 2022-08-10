@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities.UIMenu;
 using System;
+using GameControllers;
+using UnityEngine.Events;
 
 namespace UnityCore
 {
@@ -15,6 +17,7 @@ namespace UnityCore
             #region Main Attributes
 
             public bool debug;
+            public static event Action OnSceneChange;
             public delegate void SceneLoadDelegate(SceneType _scene);
 
             private bool m_SceneIsLoading;
@@ -139,7 +142,9 @@ namespace UnityCore
                     }
                 }
 
+                OnSceneChange?.Invoke();
                 AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(m_TargetScene.ToString());
+
                 while (!asyncLoad.isDone)
                 {
                     screenLoadProgress = Mathf.Clamp01(asyncLoad.progress / 0.9f);

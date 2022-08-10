@@ -239,6 +239,17 @@ public class Generics<T>
         return list;
     }
 
+    public static List<T> CirculateList(List<T> list)
+    {
+        T temp = list[0];
+        for (int i = 1; i < list.Count; i++)
+        {
+            list[i - 1] = list[i];
+        }
+        list[list.Count - 1] = temp;
+        return list;
+    }
+
     #endregion
 
 }

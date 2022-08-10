@@ -1,7 +1,4 @@
-using DG.Tweening;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -14,6 +11,7 @@ public class StageSelectionScreen : GamePopUp
     #region Public Attributes
 
     [Header("Stage Selection PopUp Elements")]
+    public Button startButton;
     public ZoomInOutPopUp popUpAnim;
     public RectTransform listParent;
     public GameObject uiPrefab;
@@ -23,7 +21,7 @@ public class StageSelectionScreen : GamePopUp
     #region Private Attributes
 
     private GameData gameData;
-    private List<StageItem> itemsList;
+    private List<MapItem> itemsList;
     private UnityAction callbackEvent;
 
     #endregion
@@ -33,14 +31,15 @@ public class StageSelectionScreen : GamePopUp
     public override void Init(GameData _gameData)
     {
         gameData = _gameData;
+        startButton.onClick.AddListener(delegate { callbackEvent?.Invoke(); });
 
-        DOTween.KillAll();
         SetUpDisplayList();
     }
 
     public override void Display()
     {
         popUpAnim.Animate(true);
+        MapSelected(gameData.selectedMap.mapIndex);
     }
 
     public override void Hide()
@@ -59,52 +58,56 @@ public class StageSelectionScreen : GamePopUp
 
     private void SetUpDisplayList()
     {
-        itemsList = new List<StageItem>();
+        itemsList = new List<MapItem>();
 
         for (int i = 0; i < gameData.gameStages.Count; i++)
         {
-            itemsList.Add(new StageItem(Instantiate(uiPrefab, listParent).GetComponent<RectTransform>()));
-            itemsList[i].SetUpStage(i, gameData.gameStages[i], StageSelected);
+            gameData.gameStages[i].mapIndex = i;
+            itemsList.Add(new MapItem(i, gameData.gameStages[i], MapSelected, 
+                Instantiate(uiPrefab, listParent).GetComponent<RectTransform>()));
         }
     }
 
-    private void StageSelected(int _stageIndex)
+    private void MapSelected(int _stageIndex)
     {
-        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
-        gameData.selectedStage = gameData.gameStages[_stageIndex];
-        callbackEvent?.Invoke();
+        if (itemsList[_stageIndex].selectIcon.enabled)
+            return;
+
+        foreach(MapItem item in itemsList)
+            item.selectIcon.enabled = false;
+
+
+        itemsList[_stageIndex].selectIcon.enabled = true;
+        gameData.selectedMap = gameData.gameStages[_stageIndex];
+        //AudioController.Instance.PlayAudio(AudioName.UI_SFX);
     }
 
     #endregion
 
 }
 
-public struct StageItem
+public struct MapItem
 {
     public RectTransform parent;
-    public Image displayImage;
-    public TMP_Text displayText;
-    public TMP_Text infoText;
-    public Button onClickBtn;
+    public Image layer1;
+    public Image layer2;
+    public Image layer3;
+    public Image selectIcon;
+    public Button selectBtn;
 
-    public StageItem(RectTransform _parent)
+    public MapItem(int _stageIndex, GameMap _mapInfo, ButtonEvent _onClickEvent, RectTransform _parent)
     {
         parent = _parent;
 
-        displayImage = parent.GetChild(0).GetComponent<Image>();
-        displayText = parent.GetChild(1).GetComponent<TMP_Text>();
-        infoText = parent.GetChild(2).GetComponent<TMP_Text>();
-        onClickBtn = parent.GetChild(3).GetComponent<Button>();
-    }
+        layer1 = parent.GetChild(1).GetComponent<Image>();
+        layer2 = parent.GetChild(2).GetComponent<Image>();
+        layer3 = parent.GetChild(3).GetComponent<Image>();
+        selectIcon = parent.GetChild(4).GetComponent<Image>();
+        selectBtn = parent.GetChild(3).GetComponent<Button>();
 
-    public void SetUpStage(int _stageIndex, GameStage _stageInfo, ButtonEvent _onClickEvent)
-    {
-        displayText.text = _stageInfo.stageName;
-        displayImage.sprite = _stageInfo.stageUISprite;
-        onClickBtn.interactable = _stageInfo.unLocked;
-        infoText.gameObject.SetActive(!_stageInfo.unLocked);
-        onClickBtn.onClick.AddListener(delegate { _onClickEvent(_stageIndex); });
-        infoText.text = "Reach Up To " + _stageInfo.scoresCriteria + " Scores To Unlock This Stage!";
+        layer1.sprite = _mapInfo.layerOne;
+        layer2.sprite = _mapInfo.layerTwo;
+        layer3.sprite = _mapInfo.layerThree;
+        selectBtn.onClick.AddListener(delegate { _onClickEvent(_stageIndex); });
     }
-
 }

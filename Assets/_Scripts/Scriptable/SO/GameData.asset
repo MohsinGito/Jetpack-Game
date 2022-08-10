@@ -16,124 +16,56 @@ MonoBehaviour:
   resetGame: 0
   scoresBoost: 1
   coinsScores: 5
-  sessionScores: 401
-  gameEarnedScores: 72130
+  sessionScores: 0
+  gameEarnedScores: 0
   gameStages:
   - stageName: Level 1
-    platform: {fileID: 21300000, guid: e7c353da85a434e8e9443778558245a6, type: 3}
-    layerOne: {fileID: 21300000, guid: 7795cc7c2d4a1439e8a79c61df2574cc, type: 3}
-    layerTwo: {fileID: 21300000, guid: 5a90946e6d47b4ff09cee54c058f0977, type: 3}
-    layerThree: {fileID: 21300000, guid: 8eb7df6f796b74ed29b38f37a42b79cd, type: 3}
-    groundSprite: {fileID: 21300000, guid: b44fd4f2754ef4e288965f9ca4463f1f, type: 3}
-    stageUISprite: {fileID: 21300000, guid: 611ac18c91d4d4e3a9453afd3defe178, type: 3}
-    backgroundColor: {r: 0.36862746, g: 0.18039216, b: 0.039215688, a: 1}
-    unLocked: 1
-    scoresCriteria: 0
+    layerOne: {fileID: 21300000, guid: 22f5f2d865a444c64abbb6980ff8a61a, type: 3}
+    layerTwo: {fileID: 21300000, guid: 6d19c5771b08f4e94bd099a390039232, type: 3}
+    layerThree: {fileID: 21300000, guid: 082a0cfb9da3c4a85bc1fa3223f30860, type: 3}
   - stageName: Level 2
-    platform: {fileID: 21300000, guid: 816ef1554a3c34f6f94cb159bb8b9975, type: 3}
-    layerOne: {fileID: 21300000, guid: 0648953ccebcd46e89c60c35635abb67, type: 3}
-    layerTwo: {fileID: 21300000, guid: ef08ec3a2932047a98a09ae05230b030, type: 3}
-    layerThree: {fileID: 21300000, guid: 1fd1bfc223ca34540b84513fd7387216, type: 3}
-    groundSprite: {fileID: 21300000, guid: 0b0c958a400464cc3ac63064df471e57, type: 3}
-    stageUISprite: {fileID: 21300000, guid: d15f368beffae43ae99499e84fb49391, type: 3}
-    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-    unLocked: 1
-    scoresCriteria: 10000
+    layerOne: {fileID: 21300000, guid: 39519ddcc225b4b2abfd1ae9fbe9aa06, type: 3}
+    layerTwo: {fileID: 21300000, guid: 39519ddcc225b4b2abfd1ae9fbe9aa06, type: 3}
+    layerThree: {fileID: 21300000, guid: 39519ddcc225b4b2abfd1ae9fbe9aa06, type: 3}
   - stageName: Level 3
-    platform: {fileID: 21300000, guid: c913a747873814627a8d1d5041c32d89, type: 3}
-    layerOne: {fileID: 21300000, guid: dd0869607fe1a467dae3e779845d5858, type: 3}
-    layerTwo: {fileID: 21300000, guid: 299369d3bbc8b4f6198e607ab4b2698c, type: 3}
-    layerThree: {fileID: 21300000, guid: 3802582514d2b4803ad746e157de8971, type: 3}
-    groundSprite: {fileID: 21300000, guid: 4464a2d74048046499dd5cdc7df1f443, type: 3}
-    stageUISprite: {fileID: 21300000, guid: bed51a258f09b4de28e08b840a03fb1d, type: 3}
-    backgroundColor: {r: 0.61960787, g: 0.38039216, b: 0.8666667, a: 1}
-    unLocked: 1
-    scoresCriteria: 25000
-  - stageName: Level 4
-    platform: {fileID: 21300000, guid: 25035ff2ce64a4ed58aa6031b03ff311, type: 3}
-    layerOne: {fileID: 21300000, guid: bf812595f030e4155b4c34c4db30ae42, type: 3}
-    layerTwo: {fileID: 21300000, guid: bf812595f030e4155b4c34c4db30ae42, type: 3}
-    layerThree: {fileID: 21300000, guid: bf812595f030e4155b4c34c4db30ae42, type: 3}
-    groundSprite: {fileID: 21300000, guid: 5dbbf9ad1275b4d1486c110b50fa14ef, type: 3}
-    stageUISprite: {fileID: 21300000, guid: 5aeef484a272d48fd8e76f7a7c5e1166, type: 3}
-    backgroundColor: {r: 0.35686275, g: 0.28627452, b: 0.23137255, a: 1}
-    unLocked: 1
-    scoresCriteria: 50000
-  - stageName: Level 5
-    platform: {fileID: 21300000, guid: 84dc8241fb9ee456589bd6a21c0929b6, type: 3}
-    layerOne: {fileID: 21300000, guid: 23e1f4813384044ebbc5429152e08a1b, type: 3}
-    layerTwo: {fileID: 21300000, guid: 0c73767cb10094c7193b62c857a76c9a, type: 3}
-    layerThree: {fileID: 21300000, guid: e0ded20edeacf479cae5e19c071acc63, type: 3}
-    groundSprite: {fileID: 21300000, guid: 66dcf81660a2c4a78a314159408b3772, type: 3}
-    stageUISprite: {fileID: 21300000, guid: a8552be7c73ef491fbe6cd1648eec128, type: 3}
-    backgroundColor: {r: 0.4, g: 0.4, b: 0, a: 1}
-    unLocked: 0
-    scoresCriteria: 100000
-  - stageName: Level 6
-    platform: {fileID: 21300000, guid: 5ee2c5ab9e45740a9afb48f878feeb9f, type: 3}
-    layerOne: {fileID: 21300000, guid: 7f48f8c587e57413696ec830bd5c336e, type: 3}
-    layerTwo: {fileID: 21300000, guid: 1dbb2e6a046f44fd1932c117bde8c8a2, type: 3}
-    layerThree: {fileID: 21300000, guid: a78ebcc3609e545138373f0ecd524243, type: 3}
-    groundSprite: {fileID: 21300000, guid: 4a9f5b3e332e24672824c96e1926bee5, type: 3}
-    stageUISprite: {fileID: 21300000, guid: 467c96d6c538442e997e1527c4eb2e90, type: 3}
-    backgroundColor: {r: 0.25882354, g: 0.14509805, b: 0.07450981, a: 1}
-    unLocked: 0
-    scoresCriteria: 250000
+    layerOne: {fileID: 21300000, guid: 4a9df581b6e2245e48b1128ad0c9f010, type: 3}
+    layerTwo: {fileID: 21300000, guid: 4a9df581b6e2245e48b1128ad0c9f010, type: 3}
+    layerThree: {fileID: 21300000, guid: 5b234b70fe1c04a0e865421798570400, type: 3}
+  - stageName: Level 3
+    layerOne: {fileID: 21300000, guid: dc4168184c51248a18c2982d60072218, type: 3}
+    layerTwo: {fileID: 21300000, guid: dc4168184c51248a18c2982d60072218, type: 3}
+    layerThree: {fileID: 21300000, guid: b203e262c3b464775b757e6d0cbce897, type: 3}
   gameCharacters:
   - characterName: Charlie
-    idleSprite: {fileID: 21300000, guid: c0f243410c5ee485eb994e21843eab68, type: 3}
-    jumpSprite: {fileID: 21300000, guid: 2652346cf18ba46faaae5bd7089f909f, type: 3}
-    dieSprite: {fileID: 21300000, guid: 5fad6b3a46e0f44c18dab5e70afb3c79, type: 3}
+    uiSprite: {fileID: 21300000, guid: 755f9c37a763f4c2590ea7969e596df3, type: 3}
+    controller: {fileID: 9100000, guid: 08e1aef1b4d36f74babba4cf7e3ad41e, type: 2}
     unLocked: 1
     scoresCriteria: 0
   - characterName: Bugs
-    idleSprite: {fileID: 21300000, guid: 1c8d951251261418d958379e706981cd, type: 3}
-    jumpSprite: {fileID: 21300000, guid: 90ae933199d5e4c3a998c2533b7740de, type: 3}
-    dieSprite: {fileID: 21300000, guid: 3d84f22adaa9b422095581c1f35566e7, type: 3}
+    uiSprite: {fileID: 21300000, guid: 943a8f7825d814589bc46d1cdc10e635, type: 3}
+    controller: {fileID: 9100000, guid: 3bc0bcbb30cbe944da6a0cf809defd98, type: 2}
     unLocked: 1
     scoresCriteria: 1000
   - characterName: Dennis
-    idleSprite: {fileID: 21300000, guid: 373e82ee8564241a698e0e4a40e6971a, type: 3}
-    jumpSprite: {fileID: 21300000, guid: ff9b1412d54654a20889800a012eb531, type: 3}
-    dieSprite: {fileID: 21300000, guid: 849c7815a4bd8460cac2c3390a79ebd6, type: 3}
+    uiSprite: {fileID: 21300000, guid: b0c5d7c58116b40db91acebeee801ecd, type: 3}
+    controller: {fileID: 9100000, guid: d6f6038abed3fb6428ece7c2d44e5c7e, type: 2}
     unLocked: 1
     scoresCriteria: 10000
   - characterName: Betty
-    idleSprite: {fileID: 21300000, guid: 1252ab969a99b4b0f8a5f0dd9cb4907b, type: 3}
-    jumpSprite: {fileID: 21300000, guid: 4644024864f1c43efa204341abe7b6bf, type: 3}
-    dieSprite: {fileID: 21300000, guid: c620bfbc4d0c840629e21ef914cddf67, type: 3}
+    uiSprite: {fileID: 21300000, guid: 6dab52c1797a046fca6166bd709e3008, type: 3}
+    controller: {fileID: 9100000, guid: 209d68b23d22aef47854236aea4d66dc, type: 2}
     unLocked: 1
     scoresCriteria: 25000
   - characterName: Garfield
-    idleSprite: {fileID: 21300000, guid: 9add23d0b59df4661a67a13c85797778, type: 3}
-    jumpSprite: {fileID: 21300000, guid: aaa9880fea395450da04eceecdf1a2e9, type: 3}
-    dieSprite: {fileID: 21300000, guid: 5e49b113a41904ed2ac77aaf1e4d49d5, type: 3}
+    uiSprite: {fileID: 21300000, guid: f2870c04633be494da46988a6111a7df, type: 3}
+    controller: {fileID: 9100000, guid: 5fecc32204696a24db71f8bc4abbf509, type: 2}
     unLocked: 1
     scoresCriteria: 50000
   - characterName: Yogi
-    idleSprite: {fileID: 21300000, guid: f9808c8c3e4804968aa9f6091dc5e515, type: 3}
-    jumpSprite: {fileID: 21300000, guid: 94256f562594a478d916439a530ac8c7, type: 3}
-    dieSprite: {fileID: 21300000, guid: 17a3b69200db14d73bc1ca00255c1aa1, type: 3}
+    uiSprite: {fileID: 21300000, guid: a2203f590d54d49b586b85c0d1a698fb, type: 3}
+    controller: {fileID: 9100000, guid: 146953deab58b2b429b952678002226c, type: 2}
     unLocked: 0
     scoresCriteria: 100000
-  - characterName: 'Donald '
-    idleSprite: {fileID: 21300000, guid: 519d1bbd39bd444be8e4022153fb1aa6, type: 3}
-    jumpSprite: {fileID: 21300000, guid: 930ec81cb7c54423489aa839e40f59db, type: 3}
-    dieSprite: {fileID: 21300000, guid: 4280a688b4b2d41fc9cb9995b851062a, type: 3}
-    unLocked: 0
-    scoresCriteria: 150000
-  - characterName: Popeye
-    idleSprite: {fileID: 21300000, guid: acda77847f788422aa9734aede693469, type: 3}
-    jumpSprite: {fileID: 21300000, guid: e0f666f95a57b4921b5733628e70f045, type: 3}
-    dieSprite: {fileID: 21300000, guid: 3204fc0c28ac34cc08f24568f0f7f67f, type: 3}
-    unLocked: 0
-    scoresCriteria: 250000
-  - characterName: Snoopy
-    idleSprite: {fileID: 21300000, guid: 02d282c731f7e4ac386f1b80e4c73b92, type: 3}
-    jumpSprite: {fileID: 21300000, guid: 162449585103c4cf78c0cfa78074c2e8, type: 3}
-    dieSprite: {fileID: 21300000, guid: f1ddc84858bda49398dfddf2b75b7f2b, type: 3}
-    unLocked: 0
-    scoresCriteria: 500000
   gameFlyingEnemies:
   - enemyName: Bat
     animationSprites:
@@ -185,20 +117,13 @@ MonoBehaviour:
     - {fileID: 21300000, guid: ad2df1e981d0e47fb9846c1841e9668d, type: 3}
   selectedStage:
     stageName: Level 1
-    platform: {fileID: 21300000, guid: e7c353da85a434e8e9443778558245a6, type: 3}
     layerOne: {fileID: 21300000, guid: 7795cc7c2d4a1439e8a79c61df2574cc, type: 3}
     layerTwo: {fileID: 21300000, guid: 5a90946e6d47b4ff09cee54c058f0977, type: 3}
     layerThree: {fileID: 21300000, guid: 8eb7df6f796b74ed29b38f37a42b79cd, type: 3}
-    groundSprite: {fileID: 21300000, guid: b44fd4f2754ef4e288965f9ca4463f1f, type: 3}
-    stageUISprite: {fileID: 21300000, guid: 611ac18c91d4d4e3a9453afd3defe178, type: 3}
-    backgroundColor: {r: 0.36862746, g: 0.18039216, b: 0.039215688, a: 1}
-    unLocked: 1
-    scoresCriteria: 0
   selectedCharacter:
     characterName: Charlie
-    idleSprite: {fileID: 21300000, guid: c0f243410c5ee485eb994e21843eab68, type: 3}
-    jumpSprite: {fileID: 21300000, guid: 2652346cf18ba46faaae5bd7089f909f, type: 3}
-    dieSprite: {fileID: 21300000, guid: 5fad6b3a46e0f44c18dab5e70afb3c79, type: 3}
+    uiSprite: {fileID: 0}
+    controller: {fileID: 0}
     unLocked: 1
     scoresCriteria: 0
   sfxOn: 1

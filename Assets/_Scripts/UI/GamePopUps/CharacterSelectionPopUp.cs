@@ -33,7 +33,7 @@ public class CharacterSelectionPopUp : GamePopUp
     public override void Init(GameData _gameData)
     {
         gameData = _gameData;
-        currentCharacterIndex = 0;
+        currentCharacterIndex = gameData.selectedCharacter.characterIndex;
 
         leftArrowButton.onClick.AddListener(MoveToLeft);
         rightArrowButton.onClick.AddListener(MoveToRight);
@@ -85,7 +85,7 @@ public class CharacterSelectionPopUp : GamePopUp
     private void SetUpCharacter()
     {
         displayName.text = gameData.gameCharacters[currentCharacterIndex].characterName;
-        displayImage.sprite = gameData.gameCharacters[currentCharacterIndex].idleSprite;
+        displayImage.sprite = gameData.gameCharacters[currentCharacterIndex].uiSprite;
         displayImage.color = gameData.gameCharacters[currentCharacterIndex].unLocked ? Color.white : Color.black;
         selectCharacterButton.interactable = gameData.gameCharacters[currentCharacterIndex].unLocked;
         infoText.gameObject.SetActive(!gameData.gameCharacters[currentCharacterIndex].unLocked);
@@ -94,9 +94,10 @@ public class CharacterSelectionPopUp : GamePopUp
 
     private void SelectCharacter()
     {
-        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
-        gameData.selectedCharacter = gameData.gameCharacters[currentCharacterIndex];
         callbackEvent?.Invoke();
+        gameData.selectedCharacter = gameData.gameCharacters[currentCharacterIndex];
+        gameData.selectedCharacter.characterIndex = currentCharacterIndex;
+        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
     }
 
     #endregion

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace GameSession
+namespace GameControllers
 {
     public class GameSession : Singleton<GameSession>
     {

@@ -77,21 +77,21 @@ public class GameSettingsPopUp : GamePopUp
     {
         gameData.sfxOn = state;
         DataController.Instance.Sfx = state ? 1 : 0;
-        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
+       // AudioController.Instance.PlayAudio(AudioName.UI_SFX);
 
         if (state)
         {
             sfxOnBtn.GetComponent<Image>().enabled = true;
             sfxOffBtn.GetComponent<Image>().enabled = false;
-            AudioController.Instance.UnMuteTrack("Gameplay SFX");
-            AudioController.Instance.UnMuteTrack("Win/Loos SFX");
+            //AudioController.Instance.UnMuteTrack("Gameplay SFX");
+            //AudioController.Instance.UnMuteTrack("Win/Loos SFX");
         }
         else
         {
             sfxOnBtn.GetComponent<Image>().enabled = false;
             sfxOffBtn.GetComponent<Image>().enabled = true;
-            AudioController.Instance.MuteTrack("Gameplay SFX");
-            AudioController.Instance.MuteTrack("Win/Loos SFX");
+            //AudioController.Instance.MuteTrack("Gameplay SFX");
+            //AudioController.Instance.MuteTrack("Win/Loos SFX");
         }
     }
 
@@ -99,19 +99,19 @@ public class GameSettingsPopUp : GamePopUp
     {
         gameData.musicOn = state;
         DataController.Instance.Music = state ? 1 : 0;
-        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
+       // AudioController.Instance.PlayAudio(AudioName.UI_SFX);
 
         if (state)
         {
             musicOnBtn.GetComponent<Image>().enabled = true;
             musicOffBtn.GetComponent<Image>().enabled = false;
-            AudioController.Instance.UnMuteTrack("Background Music");
+            //AudioController.Instance.UnMuteTrack("Background Music");
         }
         else
         {
             musicOnBtn.GetComponent<Image>().enabled = false;
             musicOffBtn.GetComponent<Image>().enabled = true;
-            AudioController.Instance.MuteTrack("Background Music");
+           // AudioController.Instance.MuteTrack("Background Music");
         }
     }
 

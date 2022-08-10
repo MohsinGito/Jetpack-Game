@@ -13,12 +13,9 @@ public class GamePausePopUp : GamePopUp
 
     [Header("Puase PopUp Elements")]
     public ZoomInOutPopUp popUpAnim;
-    public TMP_Text pauseText;
     public Button cancelButton;
     public Button restartButton;
     public Button menuButton;
-    public Button yesButton;
-    public Button noButton;
 
     #endregion
 
@@ -36,10 +33,8 @@ public class GamePausePopUp : GamePopUp
         gameData = _gameData;
         DOTween.KillAll();
 
-        noButton.onClick.AddListener(Cancel);
-        yesButton.onClick.AddListener(MoveToMainMenu);
         cancelButton.onClick.AddListener(Cancel);
-        menuButton.onClick.AddListener(SetupConfirmationPopUp);
+        menuButton.onClick.AddListener(MoveToMainMenu);
         restartButton.onClick.AddListener(RestartGame);
     }
 
@@ -57,6 +52,7 @@ public class GamePausePopUp : GamePopUp
     public override void SetAction(UnityAction _callback)
     {
         callbackEvent = _callback;
+        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
     }
 
     #endregion
@@ -65,22 +61,9 @@ public class GamePausePopUp : GamePopUp
 
     private void SetUpPausePopUp()
     {
-        pauseText.text = "Quick Action";
         cancelButton.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         menuButton.gameObject.SetActive(true);
-        yesButton.gameObject.SetActive(false);
-        noButton.gameObject.SetActive(false);
-    }
-
-    private void SetupConfirmationPopUp()
-    {
-        pauseText.text = "Exit To Menu?";
-        cancelButton.gameObject.SetActive(false);
-        restartButton.gameObject.SetActive(false);
-        menuButton.gameObject.SetActive(false);
-        yesButton.gameObject.SetActive(true);
-        noButton.gameObject.SetActive(true);
     }
 
     private void Cancel()

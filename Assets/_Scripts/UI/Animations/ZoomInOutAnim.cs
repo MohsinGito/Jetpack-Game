@@ -1,4 +1,5 @@
 using DG.Tweening;
+using UnityCore.Scene;
 using UnityEngine;
 
 public class ZoomInOutAnim : MonoBehaviour
@@ -15,6 +16,12 @@ public class ZoomInOutAnim : MonoBehaviour
         originalScale = m_Rect.localScale;
     }
 
+    private void OnEnable()
+    {
+        ZoomIn();
+        SceneController.OnSceneChange += ResetZoomAnim;
+    }
+
     private void ZoomIn()
     {
         m_Rect.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(ZoomOut);
@@ -25,13 +32,9 @@ public class ZoomInOutAnim : MonoBehaviour
         m_Rect.DOScale(originalScale, speed).OnComplete(ZoomIn);
     }
 
-    private void OnEnable()
-    {
-        ZoomIn();
-    }
-
-    private void OnDisable()
+    private void ResetZoomAnim()
     {
         m_Rect.DOKill();
+        SceneController.OnSceneChange -= ResetZoomAnim;
     }
 }

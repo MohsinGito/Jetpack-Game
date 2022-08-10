@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using UnityCore.Scene;
 using UnityEngine;
 
 public class UiHorizontaleShake : MonoBehaviour
@@ -12,6 +13,8 @@ public class UiHorizontaleShake : MonoBehaviour
     [SerializeField] float shakeSpeed;
     [SerializeField] float shakeDuration;
     [SerializeField] RectTransform uiRect;
+    [SerializeField] bool shakeOnEnable;
+    [SerializeField] bool endlessShake;
 
     private bool canShake;
     private Vector2 newPos;
@@ -20,22 +23,25 @@ public class UiHorizontaleShake : MonoBehaviour
 
     #region Main Methods
 
-    private void Awake()
+    private void OnEnable()
     {
-        Shake();
+        if(shakeOnEnable)
+            Shake();
+
+        SceneController.OnSceneChange += ResetShakeAnim;
     }
 
     public void Shake()
     {
         StartCoroutine(ShakeTimer());
-        ShakeLeft();
-
         IEnumerator ShakeTimer()
         {
             canShake = true;
             yield return new WaitForSeconds(shakeDuration);
-            canShake = false;
+            canShake = endlessShake;
         }
+
+        ShakeLeft();
     }
 
     private void ShakeLeft()
@@ -54,6 +60,12 @@ public class UiHorizontaleShake : MonoBehaviour
 
         newPos = new Vector2(uiRect.anchoredPosition.x - shakeForce, uiRect.anchoredPosition.y);
         uiRect.DOAnchorPos(newPos, shakeSpeed).OnComplete(ShakeLeft);
+    }
+
+    private void ResetShakeAnim()
+    {
+        uiRect.DOKill();
+        SceneController.OnSceneChange -= ResetShakeAnim;
     }
 
     #endregion

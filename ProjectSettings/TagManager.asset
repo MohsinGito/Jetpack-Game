@@ -5,14 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin
-  - FxTemporaire
-  - Undefined
-  - Environment Patch
-  - Ground Obstacle
-  - Flying Obstacle
-  - Dead End
-  - Boost Jump
-  - Extra Life
+  - Obstacle
   layers:
   - Default
   - TransparentFX
