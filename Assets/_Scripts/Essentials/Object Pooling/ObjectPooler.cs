@@ -83,6 +83,10 @@ public class ObjectPooler : MonoBehaviour
             return false;
 
         objectToReturn.SetActive(false);
+        objectToReturn.transform.position = Vector3.zero;
+        objectToReturn.transform.localPosition = Vector3.zero;
+        objectToReturn.transform.rotation = Quaternion.identity;
+        objectToReturn.transform.localRotation = Quaternion.identity;
         objectToReturn.transform.parent = poolRecords[poolTag].PoolParent;
         PoolList[poolTag].Enqueue(objectToReturn);
         return true;

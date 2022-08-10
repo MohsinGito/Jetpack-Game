@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3993303544058478988}
   - component: {fileID: 2418333201528564081}
   m_Layer: 0
-  m_Name: Wood Box
+  m_Name: Wood Box 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PoolManager : ObjectPooler
@@ -24,7 +25,7 @@ public class PoolManager : ObjectPooler
 
     #region Public Attributes
 
-    public List<PoolObj> ObjectsForPooling;
+    public List<PoolInfo> poolInfos;
     public bool canDebug;
 
     #endregion
@@ -33,15 +34,18 @@ public class PoolManager : ObjectPooler
 
     private void Init()
     {
-        foreach(PoolObj item in ObjectsForPooling)
+        foreach(PoolInfo poolItem in poolInfos)
         {
-            if(Create(item.Tag, item.Prefab))
+            foreach (PoolObj item in poolItem.ObjectsForPooling)
             {
-                Log("Pool Created With Tag ('" + item.Tag + "')");
-            }
-            else
-            {
-                LogError("Failed To Create Pool With Tag ('" + item.Tag + "') || POOL ALREADY CREATED!");
+                if (Create(item.Tag, item.Prefab))
+                {
+                    Log("Pool Created With Tag ('" + item.Tag + "')");
+                }
+                else
+                {
+                    LogError("Failed To Create Pool With Tag ('" + item.Tag + "') || POOL ALREADY CREATED!");
+                }
             }
         }
     }
@@ -72,6 +76,19 @@ public class PoolManager : ObjectPooler
         }
     }
 
+
+    public void ReturnToPool(PoolObj objInfo)
+    {
+        if (Put(objInfo.Tag, objInfo.Prefab))
+        {
+            Log("Item Added To Pool With Tag ('" + tag + "')");
+        }
+        else
+        {
+            LogError("Failed To Put Object To Pool With Tag ('" + tag + "') || POOL NOT FOUND!");
+        }
+    }
+
     public void DeletePool(string tag)
     {
         if(Delete(tag))
@@ -82,6 +99,12 @@ public class PoolManager : ObjectPooler
         {
             LogError("Failed To Delete Pool With Tag ('" + tag + "') || POOL NOT FOUND!");
         }
+    }
+
+    public List<string> GetPoolTags(string _poolName)
+    {
+        PoolInfo poolInfo = poolInfos.Find(n => n.poolName.Equals(_poolName));
+        return poolInfo.ObjectsForPooling.Select(n => n.Tag).ToList();
     }
 
     #endregion
@@ -121,6 +144,13 @@ public struct PoolObj
         Tag = _tag;
         Prefab = _obj;
     }
+}
+
+[System.Serializable]
+public struct PoolInfo
+{
+    public string poolName;
+    public List<PoolObj> ObjectsForPooling;
 }
 
 #endregion

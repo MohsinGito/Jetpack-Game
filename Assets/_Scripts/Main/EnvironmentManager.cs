@@ -79,9 +79,6 @@ public class EnvironmentManager : MonoBehaviour
 
     private void RearrangePatches()
     {
-        // -- RESETTING THE PATCH THAT JUST COMPLETED IT'S LOOP
-        environmentPatches[0].ResetPatch();
-
         // -- CIRCULATING THE LIST SO THE NEXT PATCH WILL COME TO ZERO INDEX
         cachedPatch = environmentPatches[0];
         for (int i = 0; i < environmentPatches.Count; i++)
@@ -97,6 +94,10 @@ public class EnvironmentManager : MonoBehaviour
         {
             environmentPatches[i].Position = patchesInitialPositions[i];
         }
+
+        // -- RESETTING THE PATCH THAT JUST COMPLETED IT'S LOOP
+        cachedPatch.ResetPatch();
+
     }
 
     #endregion
