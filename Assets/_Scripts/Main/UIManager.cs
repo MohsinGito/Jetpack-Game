@@ -17,13 +17,18 @@ public class UIManager : MonoBehaviour
 
     #region Private Attributes
 
+    private GameData gameData;
+    private GameManager gameManager;
 
     #endregion
 
     #region Public Methods
 
-    public void Init(GameData _gameData)
+    public void Init(GameData _gameData, GameManager _gameManager)
     {
+        gameData = _gameData;
+        gameManager = _gameManager;
+
         gameplayPopupsManager.Init(_gameData);
         pauseButton.onClick.AddListener(PauseButtonAction);
 
@@ -52,6 +57,7 @@ public class UIManager : MonoBehaviour
         {
             gameplayPopupsManager.DisplayPopUp(PopUp.CHARACTER_SELECTION, delegate
             {
+                gameManager.GameStarted();
                 gameplayPopupsManager.HidePopUp(PopUp.CHARACTER_SELECTION);
                 DOVirtual.DelayedCall(0.25f, delegate { gameplayPopupsManager.DisplayPopUp(PopUp.NONE); });
             });

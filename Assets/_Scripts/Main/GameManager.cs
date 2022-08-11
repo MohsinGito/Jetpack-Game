@@ -1,3 +1,4 @@
+using GameControllers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //uiManager.Init(gameData);
-        environmentManager.Init(gameData.selectedMap);
+        uiManager.Init(gameData, this);
+        environmentManager.Init(gameData);
         playerController.Init(gameData.selectedCharacter.controller);
+    }
+
+    public void GameStarted()
+    {
+        GameSession.StartGame();
     }
 
     #endregion

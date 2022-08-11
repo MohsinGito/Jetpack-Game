@@ -1,7 +1,8 @@
+using GameControllers;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnvironmentManager : MonoBehaviour
+public class EnvironmentManager : GameState
 {
 
     #region Public Attributes
@@ -22,6 +23,8 @@ public class EnvironmentManager : MonoBehaviour
 
     #region Private Attributes
 
+    private bool isGameStarted;
+    private GameData gameData;
     private MapPatch cachedPatch;
     private List<MapPatch> environmentPatches;
     private List<Vector3> patchesInitialPositions;
@@ -30,8 +33,11 @@ public class EnvironmentManager : MonoBehaviour
 
     #region Public Methods
 
-    public void Init(GameMap _mapData)
+    public void Init(GameData _gameData)
     {
+        gameData = _gameData;
+
+        // -- INITIALIZING LISTS FOR REUSING REFERENCES
         environmentPatches = new List<MapPatch>();
         patchesInitialPositions = new List<Vector3>();
 
@@ -39,17 +45,16 @@ public class EnvironmentManager : MonoBehaviour
         for (int i = 0; i < startingMapPatches; i++)
         {
             environmentPatches.Add(Instantiate(mapPatch, transform));
-            environmentPatches[i].name = i.ToString();
 
             if (i == 0) 
             {
                 // -- CHECKING IF ITS THE FIRST PATCH THEN ASSIGN IT INITIAL POSITION
-                environmentPatches[i].SetUpPatch(_mapData, new Vector3(startingPosition, 0, 0), patchMoveSpeed, deadEndPosition);
+                environmentPatches[i].Init(new Vector3(startingPosition, 0, 0), patchMoveSpeed, deadEndPosition);
             }
             else 
             {
                 // -- IF ITS NOT FIRST PATCH THEN PREVIOUS PATCH MINUE PATCH DISTANCE WILL BE NEXT POSITION (DOING MINUS BECAUSE WE ARE MOVING IN REVERSE DIRECTION)
-                environmentPatches[i].SetUpPatch(_mapData, environmentPatches[i - 1].Position - new Vector3(patchDistance, 0, 0), patchMoveSpeed, deadEndPosition);
+                environmentPatches[i].Init(environmentPatches[i - 1].Position - new Vector3(patchDistance, 0, 0), patchMoveSpeed, deadEndPosition);
             }
         }
 
@@ -62,14 +67,23 @@ public class EnvironmentManager : MonoBehaviour
         }
     }
 
+    public override void OnGameStart()
+    {
+        // -- SETTING MAP SPRITES (PLAYER SELECTED MAP)
+        foreach (MapPatch patch in environmentPatches)
+            patch.SetUpPatch(gameData.selectedMap);
+
+        isGameStarted = true;
+    }
+
     #endregion
 
     #region Private Methods
 
     private void Update()
     {
-        // -- IF LIST IS NOT POPULATED, THERE IS NO NEED TO PROCEED FURTHER
-        if (environmentPatches == null)
+        // -- IF GAME IS NOT STARTED, THERE IS NO NEED TO PROCEED FURTHER
+        if (!isGameStarted)
             return;
 
         // -- CHECKING IF THE FIRST ELEMENT REACHES TO FINAL POSITION, IF IT DOES THEN WE'LL RE-ARRANGE THE PATCHES TO INITIAL POSITIONS

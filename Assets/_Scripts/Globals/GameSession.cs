@@ -49,18 +49,6 @@ namespace GameControllers
             get { return onGameScoresChanged; }
         }
 
-        public static Action OnGameStart
-        {
-            set { onGameStartEvents += value; }
-            get { return onGameStartEvents; }
-        }
-
-        public static Action OnGameEnd
-        {
-            set { onGameEndStartEvents += value; }
-            get { return onGameEndStartEvents; }
-        }
-
         #endregion
 
         #region Unity Methods
@@ -73,6 +61,34 @@ namespace GameControllers
         private void OnApplicationFocus(bool focus)
         {
             NotifyGameStateChanged(!focus);
+        }
+
+        #endregion
+
+        #region Public Methods
+
+        public static void StartGame()
+        {
+            List<GameState> gamePausedList = FindObjectsOfType<GameState>().ToList();
+            foreach (GameState gamePaused in gamePausedList)
+            {
+                gamePaused.OnGameStart();
+            }
+        }
+
+        public static void EndGame()
+        {
+            List<GameState> gamePausedList = FindObjectsOfType<GameState>().ToList();
+            foreach (GameState gamePaused in gamePausedList)
+            {
+                gamePaused.OnGameEnd();
+            }
+        }
+
+        public static void ClearCache()
+        {
+            onGameStartEvents = null;
+            OnGameScoresChanged = null;
         }
 
         #endregion
@@ -105,6 +121,8 @@ namespace GameControllers
 
     public abstract class GameState : MonoBehaviour
     {
-        public abstract void GameStateChanged(bool isPaused);
+        public virtual void GameStateChanged(bool isPaused) { }
+        public virtual void OnGameStart() { }
+        public virtual void OnGameEnd() { }
     }
 }

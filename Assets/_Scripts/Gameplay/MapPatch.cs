@@ -1,6 +1,6 @@
-using System.Collections.Generic;
-using GameControllers;
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class MapPatch : MonoBehaviour
 {
@@ -27,10 +27,10 @@ public class MapPatch : MonoBehaviour
     private float deadEnd;
     private float moveSpeed;
     private string randomObstacleName;
-    private List<PoolObj> spawnedAssets;
     private List<string> electricObstacles;
     private List<string> floorObstacles;
     private List<string> groundObstacles;
+    private List<PoolObj> spawnedAssets;
 
     public Vector3 Position
     {
@@ -40,26 +40,38 @@ public class MapPatch : MonoBehaviour
 
     #endregion
 
-    #region Public Methods
+    #region Initialization Methods
 
-    public void SetUpPatch(GameMap _mapData,Vector3 _initialPos, float _moveSpeed, float _deadEnd)
+    public void Init(Vector3 _initialPos, float _moveSpeed, float _deadEnd)
     {
         deadEnd = _deadEnd;
         moveSpeed = _moveSpeed;
-        layerOne.sprite = _mapData.layerOne;
-        layerTwo.sprite = _mapData.layerTwo;
-        layerThree.sprite = _mapData.layerThree;
         transform.position = _initialPos;
 
         spawnedAssets = new List<PoolObj>();
         floorObstacles = PoolManager.Instance.GetPoolTags("Floor Obstacles");
         groundObstacles = PoolManager.Instance.GetPoolTags("Ground Obstacles");
         electricObstacles = PoolManager.Instance.GetPoolTags("Electrical Obstacles");
+    }
 
+    public void SetUpPatch(GameMap _mapData)
+    {
         initialized = true;
-        GameSession.OnGameEnd += delegate { initialized = false; };
+        layerOne.sprite = _mapData.layerOne;
+        layerTwo.sprite = _mapData.layerTwo;
+        layerThree.sprite = _mapData.layerThree;
+    }
 
-        ResetPatch();
+    #endregion
+
+    #region Patch Transform Methods
+
+    private void Update()
+    {
+        if (!initialized)
+            return;
+
+        transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
     }
 
     public bool ReachedToDeadEnd()
@@ -75,6 +87,7 @@ public class MapPatch : MonoBehaviour
             PoolManager.Instance.ReturnToPool(obj);
 
         spawnedAssets.Clear();
+        StopAllCoroutines();
         SetUpFloorObstacles();
         SetupGroundAssets();
         SetUpElectricObstacles();
@@ -82,15 +95,21 @@ public class MapPatch : MonoBehaviour
 
     #endregion
 
-    #region Private Methods
+    #region Patch Controlls Methods
 
-    private void Update()
+    public void DestroyAllObstacles()
     {
-        if (!initialized)
-            return;
 
-        transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
     }
+
+    public void PauseMovement()
+    {
+
+    }
+
+    #endregion
+
+    #region Patch Obstacle Managing Methods
 
     private void SetUpFloorObstacles()
     {
@@ -107,10 +126,13 @@ public class MapPatch : MonoBehaviour
 
     private void SetUpElectricObstacles()
     {
-        if(true)
+        if (true)
         {
             int randIndex = Random.Range(0, electricObstaclePos.Count);
             SpawnNewElectricObstacle(electricObstaclePos[randIndex].localPosition.x);
+
+            if (Random.Range(0, 4) == 2)
+                StartCoroutine(RotateObstacle(spawnedAssets[spawnedAssets.Count - 1].Prefab.transform));
         }
         else
         {
@@ -126,6 +148,15 @@ public class MapPatch : MonoBehaviour
             randomObstacleName = electricObstacles[Random.Range(0, electricObstacles.Count)];
             SpawnAssetAt(randomObstacleName, new Vector3(xPos, Random.Range(minMaxY.x, minMaxY.y), 0));
             spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.eulerAngles = new Vector3(0, 0, randomRot);
+        }
+
+        IEnumerator RotateObstacle(Transform _obstacle)
+        {
+            while(true)
+            {
+                _obstacle.Rotate(0f, 0f, (Random.Range(50f, 100f) * Time.deltaTime));
+                yield return new WaitForEndOfFrame();
+            }
         }
     }
 
