@@ -49,12 +49,12 @@ public class EnvironmentManager : GameState
             if (i == 0) 
             {
                 // -- CHECKING IF ITS THE FIRST PATCH THEN ASSIGN IT INITIAL POSITION
-                environmentPatches[i].Init(new Vector3(startingPosition, 0, 0), patchMoveSpeed, deadEndPosition);
+                environmentPatches[i].Init(this, new Vector3(startingPosition, 0, 0), patchMoveSpeed, deadEndPosition);
             }
             else 
             {
                 // -- IF ITS NOT FIRST PATCH THEN PREVIOUS PATCH MINUE PATCH DISTANCE WILL BE NEXT POSITION (DOING MINUS BECAUSE WE ARE MOVING IN REVERSE DIRECTION)
-                environmentPatches[i].Init(environmentPatches[i - 1].Position - new Vector3(patchDistance, 0, 0), patchMoveSpeed, deadEndPosition);
+                environmentPatches[i].Init(this, environmentPatches[i - 1].Position - new Vector3(patchDistance, 0, 0), patchMoveSpeed, deadEndPosition);
             }
         }
 

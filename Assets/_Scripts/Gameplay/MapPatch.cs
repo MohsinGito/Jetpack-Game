@@ -25,12 +25,12 @@ public class MapPatch : MonoBehaviour
 
     private bool initialized;
     private float deadEnd;
-    private float moveSpeed;
     private string randomObstacleName;
     private List<string> electricObstacles;
     private List<string> floorObstacles;
     private List<string> groundObstacles;
     private List<PoolObj> spawnedAssets;
+    private EnvironmentManager environmentManager;
 
     public Vector3 Position
     {
@@ -42,11 +42,11 @@ public class MapPatch : MonoBehaviour
 
     #region Initialization Methods
 
-    public void Init(Vector3 _initialPos, float _moveSpeed, float _deadEnd)
+    public void Init(EnvironmentManager _environmentManager, Vector3 _initialPos, float _moveSpeed, float _deadEnd)
     {
         deadEnd = _deadEnd;
-        moveSpeed = _moveSpeed;
         transform.position = _initialPos;
+        environmentManager = _environmentManager;
 
         spawnedAssets = new List<PoolObj>();
         floorObstacles = PoolManager.Instance.GetPoolTags("Floor Obstacles");
@@ -71,7 +71,7 @@ public class MapPatch : MonoBehaviour
         if (!initialized)
             return;
 
-        transform.position -= new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+        transform.position -= new Vector3(environmentManager.patchMoveSpeed * Time.deltaTime, 0, 0);
     }
 
     public bool ReachedToDeadEnd()

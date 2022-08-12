@@ -55,11 +55,22 @@ public static class Helper
 
     #region Getting World Position With Respect To UI Element
 
-    public static Vector2 GetWorlPosition(RectTransform rectTransform)
+    public static Vector2 UIToWorld(RectTransform rectTransform)
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, 
             rectTransform.position, MainCamera, out var worldPos);
         return worldPos;
+    }
+
+    public static Vector2 WorldToUI(RectTransform canvas, Vector3 position)
+    {
+        Vector2 temp = MainCamera.WorldToViewportPoint(position);
+        temp.x *= canvas.sizeDelta.x;
+        temp.y *= canvas.sizeDelta.y;
+        temp.x -= canvas.sizeDelta.x * canvas.pivot.x;
+        temp.y -= canvas.sizeDelta.y * canvas.pivot.y;
+
+        return temp;
     }
 
     #endregion

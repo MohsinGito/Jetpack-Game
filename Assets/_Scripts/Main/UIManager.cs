@@ -8,10 +8,12 @@ public class UIManager : MonoBehaviour
 
     #region Public Attributes
 
+    public Transform dummy;
     public GameplayPopupsManager gameplayPopupsManager;
 
     [Header("-- UI Elements --")]
     public Button pauseButton;
+    public RectTransform missleIndecator;
 
     #endregion
 
@@ -19,6 +21,7 @@ public class UIManager : MonoBehaviour
 
     private GameData gameData;
     private GameManager gameManager;
+    private RectTransform mainCanvas;
 
     #endregion
 
@@ -28,12 +31,22 @@ public class UIManager : MonoBehaviour
     {
         gameData = _gameData;
         gameManager = _gameManager;
+        mainCanvas = GetComponent<RectTransform>();
 
         gameplayPopupsManager.Init(_gameData);
         pauseButton.onClick.AddListener(PauseButtonAction);
 
         SetUpInitialPopUps();
     }
+
+    private void Update()
+    {
+        MissleIndication(dummy, true);
+    }
+
+    #endregion
+
+    #region PopUps Managing Methods
 
     public void ShowGameEndPopUp()
     {
@@ -46,10 +59,6 @@ public class UIManager : MonoBehaviour
 
         AudioController.Instance.PlayAudio(AudioName.UI_SFX);
     }
-
-    #endregion
-
-    #region Private Methods
 
     private void SetUpInitialPopUps()
     {
@@ -73,6 +82,17 @@ public class UIManager : MonoBehaviour
         });
 
         AudioController.Instance.PlayAudio(AudioName.UI_SFX);
+    }
+
+    #endregion
+
+    #region Utilities
+
+    public void MissleIndication(Transform pos, bool visibility)
+    {
+        missleIndecator.gameObject.SetActive(visibility);
+        missleIndecator.anchoredPosition = new Vector2(missleIndecator.anchoredPosition.x,
+            Helper.WorldToUI(mainCanvas, pos.position).y);
     }
 
     #endregion

@@ -57,7 +57,7 @@ public class PlayerController : GameState
             return;
 
         // -- IF PLAYER START PRESSING THE MOUSE CLICK, HE'LL START MOVING UP
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !Helper.IsCursorOverUI())
         {
             beginFlyUp = true;
             
