@@ -31,7 +31,11 @@ public class StageSelectionScreen : GamePopUp
     public override void Init(GameData _gameData)
     {
         gameData = _gameData;
-        startButton.onClick.AddListener(delegate { callbackEvent?.Invoke(); });
+        startButton.onClick.AddListener(delegate 
+        { 
+            callbackEvent?.Invoke();
+            AudioController.Instance.PlayAudio(AudioName.UI_SFX);
+        });
 
         SetUpDisplayList();
     }
@@ -79,7 +83,6 @@ public class StageSelectionScreen : GamePopUp
 
         itemsList[_stageIndex].selectIcon.enabled = true;
         gameData.selectedMap = gameData.gameStages[_stageIndex];
-        //AudioController.Instance.PlayAudio(AudioName.UI_SFX);
     }
 
     #endregion

@@ -73,12 +73,14 @@ public class GamePausePopUp : GamePopUp
 
     private void MoveToMainMenu()
     {
+        Time.timeScale = 1;
         AudioController.Instance.PlayAudio(AudioName.UI_SFX);
         SceneManager.LoadScene("Gameplay");
     }
 
     private void RestartGame()
     {
+        Time.timeScale = 1;
         AudioController.Instance.PlayAudio(AudioName.UI_SFX);
         gameData.restartGame = true;
         popUpAnim.ResetPopUp();

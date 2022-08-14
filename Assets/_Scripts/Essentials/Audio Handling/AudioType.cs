@@ -10,10 +10,22 @@
             GAMEPLAY_BG_MUSIC,
 
             UI_SFX,
-            WIN_SFX,
-            LOOSE_SFX,
+            POPUP_SFX,
+
             COIN_COLLECT,
-            PICKUP_COLLECT
+            PICKUP_COLLECT,
+
+            ASSET_DESTROY_EFFECT,
+            BOMB_DESTROY,
+            BULLET_FIRE,
+            ELECTRIC_OBSTACLE_DESTROY_EFFECT,
+            ENEMY_HIT_EFFECT,
+            MISSILE_INDICATION,
+            MISSILE_LAUNCH,
+
+            ROCKET_DESTROY_EFFECT,
+            BULLET_HIT_EFFECT,
+            WOOD_BOX_DESTROY_EFFECT
         }
     }
 }

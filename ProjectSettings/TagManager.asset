@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Coin
   - Obstacle
+  - FxTemporaire
+  - Enemy
+  - Shield
+  - Bomb
+  - Magnet
   layers:
   - Default
   - TransparentFX

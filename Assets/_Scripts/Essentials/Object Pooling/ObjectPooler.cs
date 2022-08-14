@@ -79,7 +79,7 @@ public class ObjectPooler : MonoBehaviour
 
     protected bool Put(string poolTag, GameObject objectToReturn)
     {
-        if(!IsPoolCreated(poolTag))
+        if(!IsPoolCreated(poolTag) || objectToReturn == null)
             return false;
 
         objectToReturn.SetActive(false);

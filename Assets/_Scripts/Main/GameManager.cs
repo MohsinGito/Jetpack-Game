@@ -2,6 +2,7 @@ using GameControllers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     [Header("-- Main Scripts --")]
     public PlayerController playerController;
     public EnvironmentManager environmentManager;
+    public MapElementManager mapElementManager;
     public UIManager uiManager;
 
     #endregion
@@ -21,13 +23,18 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        gameData.sessionCoins = 0;
         uiManager.Init(gameData, this);
-        environmentManager.Init(gameData);
-        playerController.Init(gameData.selectedCharacter.controller);
     }
 
     public void GameStarted()
     {
+        environmentManager.Init(gameData, mapElementManager);
+        playerController.Init(environmentManager, gameData.selectedCharacter.controller, uiManager);
+        mapElementManager.Init(environmentManager, uiManager, playerController);
+        AudioController.Instance.PlayAudio(AudioName.GAMEPLAY_BG_MUSIC);
+
+        GameSession.CacheScripts();
         GameSession.StartGame();
     }
 

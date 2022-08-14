@@ -1,6 +1,9 @@
 using GameControllers;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities.Audio;
 
 public class EnvironmentManager : GameState
 {
@@ -12,6 +15,7 @@ public class EnvironmentManager : GameState
 
     [Header("-- Map Speed Factor --")]
     public float patchMoveSpeed;
+    public Vector2 patchMinMaxSpeed;
 
     [Header("-- Map Spawning Info's --")]
     public int startingMapPatches;
@@ -23,19 +27,28 @@ public class EnvironmentManager : GameState
 
     #region Private Attributes
 
+    private int spawnedPatches;
     private bool isGameStarted;
     private GameData gameData;
     private MapPatch cachedPatch;
+    private MapElementManager mapElementsManager;
     private List<MapPatch> environmentPatches;
     private List<Vector3> patchesInitialPositions;
+
+    public int SpawnedPatches
+    {
+        set { spawnedPatches = value; }
+        get { return spawnedPatches; }
+    }
 
     #endregion
 
     #region Public Methods
 
-    public void Init(GameData _gameData)
+    public void Init(GameData _gameData, MapElementManager _mapElementsManager)
     {
         gameData = _gameData;
+        mapElementsManager = _mapElementsManager;
 
         // -- INITIALIZING LISTS FOR REUSING REFERENCES
         environmentPatches = new List<MapPatch>();
@@ -76,6 +89,58 @@ public class EnvironmentManager : GameState
         isGameStarted = true;
     }
 
+    public override void OnPlayerDied()
+    {
+        StartCoroutine(StartDecreasingSpeed());
+        IEnumerator StartDecreasingSpeed()
+        {
+            float startSpeed = patchMoveSpeed;
+            float endSpeed = 0;
+            float duration = 1f;
+            float time = 0;
+
+            while (time < duration)
+            {
+                patchMoveSpeed = Mathf.Lerp(startSpeed, endSpeed, time / duration);
+                time += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+        }
+    }
+
+    public override void OnGameEnd()
+    {
+        foreach(MapPatch patch in environmentPatches)
+            patch.ResetPatch();
+    }
+
+    public void DestroyMapElement(GameObject element, bool visible = true)
+    {
+        if (element.activeSelf)
+        {
+            element.SetActive(!visible);
+            string vfxName = element.transform.GetChild(1).name;
+            Vector3 obstaclePos = element.transform.position;
+
+            VFXManager.Instance.DisplayVFX(vfxName, obstaclePos, true);
+            AudioController.Instance.PlayAudio((AudioName)Enum.
+                Parse(typeof(AudioName), Helper.GetConcatination(vfxName).ToUpper()));
+        }
+    }
+
+    public void DestroyAllMapElement()
+    {
+        foreach (MapPatch mapPatch in environmentPatches)
+            mapPatch.DestroyAllObstacles();
+
+        mapElementsManager.DestroyAllElements();
+    }
+
+    public ArrayLayout GetRandomCoinsPattern()
+    {
+        return gameData.GetNewCoinsPattern();
+    }
+
     #endregion
 
     #region Private Methods
@@ -109,8 +174,12 @@ public class EnvironmentManager : GameState
             environmentPatches[i].Position = patchesInitialPositions[i];
         }
 
-        // -- RESETTING THE PATCH THAT JUST COMPLETED IT'S LOOP
+        // -- RESETTING THE PATCH THAT JUST COMPLETED IT'S LOOP AND SPAWNING NEW ELEMENTS ON IT
         cachedPatch.ResetPatch();
+        cachedPatch.SpawnElements();
+
+
+        patchMoveSpeed = Mathf.Clamp(patchMoveSpeed + 0.15f, patchMinMaxSpeed.x, patchMinMaxSpeed.y);
 
     }
 

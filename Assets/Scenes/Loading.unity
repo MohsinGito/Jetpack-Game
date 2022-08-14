@@ -161,23 +161,83 @@ MonoBehaviour:
     - type: 1
       clip: {fileID: 8300000, guid: ed48f28785755cc47a37445fb3312f45, type: 3}
     - type: 2
-      clip: {fileID: 8300000, guid: ed48f28785755cc47a37445fb3312f45, type: 3}
+      clip: {fileID: 8300000, guid: 83f34a4169a957a4bbb47685cf8a109d, type: 3}
   - trackName: Menu UI
     volume: 1
     onLoop: 0
     audio:
     - type: 3
       clip: {fileID: 8300000, guid: 0bdae480c0c8e457b9d5e578304115d7, type: 3}
-  - trackName: Gameplay SFX (1)
+    - type: 4
+      clip: {fileID: 8300000, guid: c1fc07fc9a06f0b4c9efc2c131e97e33, type: 3}
+  - trackName: Gameplay SFX Pickup
     volume: 1
     onLoop: 0
     audio:
-    - type: 6
-      clip: {fileID: 8300000, guid: a75dc0b2a4fdd2c4e882e77a7ebe9183, type: 3}
-    - type: 4
-      clip: {fileID: 8300000, guid: 71af18086727f43f6a788c82d35b43a6, type: 3}
     - type: 5
-      clip: {fileID: 8300000, guid: 50132e768dc7f43a9b0fd43996fc7ac5, type: 3}
+      clip: {fileID: 8300000, guid: a75dc0b2a4fdd2c4e882e77a7ebe9183, type: 3}
+    - type: 6
+      clip: {fileID: 8300000, guid: 88a7dffcf97e3644c99fe51cdc248043, type: 3}
+  - trackName: Electric Obstacle Destroy
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 7
+      clip: {fileID: 8300000, guid: 3bb29628f06d2194da853bc0ba4b97d9, type: 3}
+  - trackName: Bomb Destroy
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 8
+      clip: {fileID: 8300000, guid: 9d9811155e49cfd40883130870e6bdb2, type: 3}
+  - trackName: Bullet Fire
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 9
+      clip: {fileID: 8300000, guid: 94888edd545683e4cbb2735b760fd448, type: 3}
+  - trackName: Electric Obstacle Destroy Effect
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 10
+      clip: {fileID: 8300000, guid: 69af20a2d89b8a645a3736a8a68f415b, type: 3}
+  - trackName: Enemy Hit
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 11
+      clip: {fileID: 8300000, guid: f496c5cc5cb894040838d9dc2494bbbb, type: 3}
+  - trackName: Missile Indication
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 12
+      clip: {fileID: 8300000, guid: 2e640226aa704814a88fb35576e1dd1a, type: 3}
+  - trackName: Missile Launch Effect
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 13
+      clip: {fileID: 8300000, guid: 48c74292a570c7f42a4864fe1a6c4aa2, type: 3}
+  - trackName: Rocket Hit
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 14
+      clip: {fileID: 8300000, guid: 8141020bdddb8b74ba290607e6e2e7c3, type: 3}
+  - trackName: Wood Box Destroy Effect
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 16
+      clip: {fileID: 8300000, guid: cbc8a19eb8b910c46919eb797bc3a883, type: 3}
+  - trackName: Bullet Hit Effect
+    volume: 1
+    onLoop: 0
+    audio:
+    - type: 15
+      clip: {fileID: 8300000, guid: fe02321b4e4b49045b713c8187e292ef, type: 3}
 --- !u!4 &105557984
 Transform:
   m_ObjectHideFlags: 0
@@ -185,12 +245,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105557982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195762576
 GameObject:
@@ -221,6 +282,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1925645610}
   m_RootOrder: 0
@@ -314,6 +376,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 867153107}
   m_RootOrder: 1
@@ -499,6 +562,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -540, y: -960, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 613091509}
   m_RootOrder: 0
@@ -594,6 +658,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274535029}
   - {fileID: 984925323}
@@ -653,6 +718,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1897764914}
   - {fileID: 249460459}
@@ -727,12 +793,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975191829}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &975191831
 MonoBehaviour:
@@ -758,7 +825,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b85e1abe3d1ad4bbc6d094e71a17db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectsForPooling: []
+  poolInfos:
+  - poolName: Electrical Obstacles
+    ObjectsForPooling:
+    - Tag: Electric Obstacle
+      Prefab: {fileID: 5726236514583239011, guid: 0bc32b55264c9cd4d8731ad44e848d1f, type: 3}
+  - poolName: Floor Obstacles
+    ObjectsForPooling:
+    - Tag: Obstacle 2
+      Prefab: {fileID: 3949019664064621863, guid: 10109af07c531124e9ca63dbe6d37f0d, type: 3}
+  - poolName: Ground Obstacles
+    ObjectsForPooling:
+    - Tag: Pillar
+      Prefab: {fileID: 5724945374448814163, guid: 84586386d289b3a4bbf5ad0df80a1f4c, type: 3}
+    - Tag: Asset 1
+      Prefab: {fileID: 7478531805007402390, guid: 24c3238d8fd9bdc468410edda876741a, type: 3}
+    - Tag: Asset 2
+      Prefab: {fileID: 5023357905087299270, guid: 83b6c68c66795de4ea3b077372c09682, type: 3}
+    - Tag: Asset 3
+      Prefab: {fileID: 3340737842411724828, guid: bc8e69881c371b6479b3f06b74d6551b, type: 3}
+    - Tag: Obstacle 1
+      Prefab: {fileID: 4821489034298022141, guid: db7b3012445b4b54c8dc4415cd65dae4, type: 3}
+    - Tag: Wood Box 1
+      Prefab: {fileID: 639706452523613924, guid: e5603b0d23c8ac64f8d90ff1d439bb96, type: 3}
+    - Tag: Wood Box 2
+      Prefab: {fileID: 1980503348094847825, guid: 7dfaebb22560ab941b25743dafe797cf, type: 3}
+    - Tag: Wood Box 3
+      Prefab: {fileID: 1907447079591136661, guid: 4977897fe9d31d1408cabc4e47a572c2, type: 3}
+  - poolName: Flying Obstacles
+    ObjectsForPooling:
+    - Tag: Missile
+      Prefab: {fileID: 5014555023014702942, guid: e4201a8bcc803934bb524ff6384d9d52, type: 3}
+    - Tag: Bullet
+      Prefab: {fileID: 3301780018569826169, guid: c2a749c82e4eb1a448401b7e83842815, type: 3}
+    - Tag: Enemy
+      Prefab: {fileID: 4442789973478099124, guid: cb0c927fab5da0842aec831243f8f7ef, type: 3}
+  - poolName: Game VFX
+    ObjectsForPooling:
+    - Tag: Asset Destroy Effect
+      Prefab: {fileID: 250831983972887120, guid: c15663a4dc07dd645acfe97854cb3b9c, type: 3}
+    - Tag: Electric Obstacle Destroy Effect
+      Prefab: {fileID: 8108298030312975681, guid: 4acc25d08cbcc3343a1bbad959bbc117, type: 3}
+    - Tag: Rocket Destroy Effect
+      Prefab: {fileID: 1769671744054747203, guid: 87ed4e3a362c2fa49ac4af1dd25c242f, type: 3}
+    - Tag: Wood Box Destroy Effect
+      Prefab: {fileID: 2820487835958016446, guid: cb007e9b92b73ee42a6cc5edf425f397, type: 3}
+    - Tag: Bullet Hit Effect
+      Prefab: {fileID: 1335653969098964947, guid: 530af4bacb0f32340a317813e38315e9, type: 3}
+    - Tag: Enemy Hit Effect
+      Prefab: {fileID: 5171688944830836279, guid: d61b28f895720be4785b9a44dc8e14c6, type: 3}
+  - poolName: Power Up
+    ObjectsForPooling:
+    - Tag: Coin
+      Prefab: {fileID: 6198873923082928074, guid: 2f0c19b9c54fd2a46b8928665cffe986, type: 3}
+    - Tag: Bomb
+      Prefab: {fileID: 7954830344552859325, guid: 8f126d9e0573cf847a07f0a7f2a72fa2, type: 3}
+    - Tag: Magnet
+      Prefab: {fileID: 4189653619526004650, guid: e0e7909f5837c334ca77b084306b1056, type: 3}
+    - Tag: Shield
+      Prefab: {fileID: 5214814143629201628, guid: 2f31ba1d0a77657419830dc49c054e0c, type: 3}
   canDebug: 0
 --- !u!1 &984925320
 GameObject:
@@ -790,6 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -822,6 +948,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 613091509}
   m_RootOrder: 1
@@ -862,12 +989,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027404304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095393637
 GameObject:
@@ -893,12 +1021,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095393637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1095393639
 MonoBehaviour:
@@ -940,6 +1069,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 613091509}
   m_RootOrder: 2
@@ -1011,12 +1141,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577059424}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1577059426
 MonoBehaviour:
@@ -1030,33 +1161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1d5716a0f654129af110e32e2af646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSceneChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 195762580}
-        m_TargetAssemblyTypeName: UiHorizontaleShake, Assembly-CSharp
-        m_MethodName: ResetShakeAnim
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1942050196}
-        m_TargetAssemblyTypeName: ZoomInOutAnim, Assembly-CSharp
-        m_MethodName: ResetZoomAnim
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   debug: 0
 --- !u!1 &1897764913
 GameObject:
@@ -1086,6 +1190,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 867153107}
   m_RootOrder: 0
@@ -1159,6 +1264,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 195762577}
   - {fileID: 1942050192}
@@ -1201,6 +1307,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1925645610}
   m_RootOrder: 1
@@ -1306,6 +1413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomFactor: 0.15
   speed: 0.5
+  isGameObject: 0
 --- !u!114 &5817683274609442089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,9 +1458,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5817683274609442094
 MonoBehaviour:

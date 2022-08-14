@@ -6,35 +6,50 @@ public class ZoomInOutAnim : MonoBehaviour
 {
     public float zoomFactor;
     public float speed;
+    public bool isGameObject;
 
     private RectTransform m_Rect;
     private Vector3 originalScale;
 
     private void Awake()
     {
-        m_Rect = GetComponent<RectTransform>();
-        originalScale = m_Rect.localScale;
+        if (!isGameObject)
+        {
+            m_Rect = GetComponent<RectTransform>();
+            originalScale = m_Rect.localScale;
+        }
+        else
+        {
+            originalScale = transform.localScale;
+        }
     }
 
     private void OnEnable()
     {
         ZoomIn();
-        SceneController.OnSceneChange += ResetZoomAnim;
+    }
+
+    private void OnDisable()
+    {
+        if (isGameObject)
+            transform.DOKill();
+        else
+            m_Rect.DOKill();
     }
 
     private void ZoomIn()
     {
-        m_Rect.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(ZoomOut);
+        if (isGameObject)
+            transform.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(ZoomOut);
+        else
+            m_Rect.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(ZoomOut);
     }
 
     private void ZoomOut()
     {
-        m_Rect.DOScale(originalScale, speed).OnComplete(ZoomIn);
-    }
-
-    private void ResetZoomAnim()
-    {
-        m_Rect.DOKill();
-        SceneController.OnSceneChange -= ResetZoomAnim;
+        if (isGameObject)
+            transform.DOScale(originalScale, speed).OnComplete(ZoomIn);
+        else
+            m_Rect.DOScale(originalScale, speed).OnComplete(ZoomIn);
     }
 }

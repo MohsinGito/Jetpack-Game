@@ -38,7 +38,7 @@ public class GameEndPopUp : GamePopUp
 
     public override void Display()
     {
-        scoresText.text = gameData.sessionScores + "";
+        scoresText.text = gameData.sessionCoins + "";
         popUpAnim.Animate(true);
     }
 
@@ -65,9 +65,9 @@ public class GameEndPopUp : GamePopUp
 
     private void RestartGame()
     {
-        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
         gameData.restartGame = true;
         popUpAnim.ResetPopUp();
+        AudioController.Instance.PlayAudio(AudioName.UI_SFX);
         SceneManager.LoadScene("Gameplay");
     }
 

@@ -231,6 +231,26 @@ public static class Helper
 
     #endregion
 
+    #region Strings Operation
+
+    public static string GetConcatination(string str)
+    {
+        string strToReturn = "";
+        char[] charArr = str.ToCharArray();
+
+        for(int i = 0; i < charArr.Length; i++)
+        {
+            if (charArr[i].Equals(' '))
+                strToReturn += "_";
+            else
+                strToReturn += charArr[i];
+        }
+
+        return strToReturn;
+    }
+
+    #endregion
+
 }
 
 public class Generics<T>

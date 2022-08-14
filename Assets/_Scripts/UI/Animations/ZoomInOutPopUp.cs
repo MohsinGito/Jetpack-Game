@@ -67,7 +67,7 @@ public class ZoomInOutPopUp : ZoomBehaviour
                 yield return 0;
             }
 
-            m_CanvasGroup.DOFade(1, animationSpeed);
+            m_CanvasGroup.DOFade(1, animationSpeed).SetUpdate(true);
             for (int i = 0; i < animScaleFactors.Count * 2 && m_RectTransfrom != null; i++)
             {
                 if ((i + 1) % 2 == 0)
@@ -82,7 +82,7 @@ public class ZoomInOutPopUp : ZoomBehaviour
                 }
 
                 if (i == 0) { m_RectTransfrom.localScale = animSize; continue; }
-                yield return m_RectTransfrom.DOScale(animSize, animSpeed).WaitForCompletion();
+                yield return m_RectTransfrom.DOScale(animSize, animSpeed).SetUpdate(true).WaitForCompletion();
             }
         }
     }
@@ -90,8 +90,8 @@ public class ZoomInOutPopUp : ZoomBehaviour
     private void HidePopUp()
     {
         StopPopUpAnimation();
-        m_CanvasGroup.DOFade(0, animationSpeed);
-        m_RectTransfrom.DOScale(originalSize * animScaleFactors[0], animationSpeed);
+        m_CanvasGroup.DOFade(0, animationSpeed).SetUpdate(true);
+        m_RectTransfrom.DOScale(originalSize * animScaleFactors[0], animationSpeed).SetUpdate(true);
     }
 
     private void StopPopUpAnimation()

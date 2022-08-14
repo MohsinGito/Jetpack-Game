@@ -11,7 +11,7 @@ namespace GameControllers
         #region Private Attributes
 
         private static long startTime;
-        private List<GameState> gamePausedList;
+        private static List<GameState> gameStateScripts;
 
         private static event Action onGameStartEvents;
         private static event Action onGameEndStartEvents;
@@ -67,10 +67,14 @@ namespace GameControllers
 
         #region Public Methods
 
+        public static void CacheScripts()
+        {
+            gameStateScripts = FindObjectsOfType<GameState>().ToList();
+        }
+
         public static void StartGame()
         {
-            List<GameState> gamePausedList = FindObjectsOfType<GameState>().ToList();
-            foreach (GameState gamePaused in gamePausedList)
+            foreach (GameState gamePaused in gameStateScripts)
             {
                 gamePaused.OnGameStart();
             }
@@ -78,10 +82,33 @@ namespace GameControllers
 
         public static void EndGame()
         {
-            List<GameState> gamePausedList = FindObjectsOfType<GameState>().ToList();
-            foreach (GameState gamePaused in gamePausedList)
+            foreach (GameState gamePaused in gameStateScripts)
             {
                 gamePaused.OnGameEnd();
+            }
+        }
+
+        public static void PauseGame()
+        {
+            foreach (GameState gamePaused in gameStateScripts)
+            {
+                gamePaused.OnGamePause();
+            }
+        }
+
+        public static void ResumeGame()
+        {
+            foreach (GameState gamePaused in gameStateScripts)
+            {
+                gamePaused.OnGameResume();
+            }
+        }
+
+        public static void PlayerDied()
+        {
+            foreach (GameState gamePaused in gameStateScripts)
+            {
+                gamePaused.OnPlayerDied();
             }
         }
 
@@ -103,10 +130,10 @@ namespace GameControllers
 
         private void NotifyGameStateChanged(bool focus)
         {
-            gamePausedList = FindObjectsOfType<GameState>().ToList();
-            foreach (GameState gamePaused in gamePausedList)
+            gameStateScripts = FindObjectsOfType<GameState>().ToList();
+            foreach (GameState gamePaused in gameStateScripts)
             {
-                gamePaused.GameStateChanged(focus);
+                gamePaused.GameFocusChanged(focus);
             }
         }
 
@@ -121,8 +148,11 @@ namespace GameControllers
 
     public abstract class GameState : MonoBehaviour
     {
-        public virtual void GameStateChanged(bool isPaused) { }
+        public virtual void GameFocusChanged(bool isPaused) { }
         public virtual void OnGameStart() { }
         public virtual void OnGameEnd() { }
+        public virtual void OnGamePause() { }
+        public virtual void OnGameResume() { }
+        public virtual void OnPlayerDied() { }
     }
 }

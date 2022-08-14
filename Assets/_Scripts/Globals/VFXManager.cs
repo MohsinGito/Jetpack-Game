@@ -8,7 +8,20 @@ public class VFXManager : MonoBehaviour
     #region Main Attributes
 
     [SerializeField] List<GameVFX> gameVfxes;
-    static Dictionary<string, GameVFX> gameVFXs;
+     Dictionary<string, List<GameObject>> gameVFXs;
+
+    #endregion
+
+    #region Singleton
+
+    public static VFXManager Instance;
+    private void Awake()
+    {
+        if (!Instance)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     #endregion
 
@@ -16,24 +29,59 @@ public class VFXManager : MonoBehaviour
 
     private void Start()
     {
-        gameVFXs = new Dictionary<string, GameVFX>();
+        gameVFXs = new Dictionary<string, List<GameObject>>();
         foreach (GameVFX gameVFX in gameVfxes)
         {
-            gameVFXs[gameVFX.Name] = gameVFX;
+            gameVFXs[gameVFX.Name] = gameVFX.vfxs;
         }
     }
 
-    public static void DisplayVFX(string _vfxName, Vector3 vfxPos)
+    public void DisplayVFX(string _vfxName, Vector3 _vfxPos, bool _usePoolManager = false)
     {
-        gameVFXs[_vfxName].vfx.SetActive(false);
-        gameVFXs[_vfxName].vfx.SetActive(true);
-        gameVFXs[_vfxName].vfx.transform.position = vfxPos;
+        GameObject vfx;
+
+        if (_usePoolManager)
+            vfx = GetVFX(_vfxName);
+        else
+            vfx = gameVFXs[_vfxName][0];
+
+        vfx.SetActive(false);
+        vfx.SetActive(true);
+        vfx.transform.position = _vfxPos;
     }
 
-    public static void DisplayVFX(string _vfxName)
+    public void DisplayVFX(string _vfxName)
     {
-        gameVFXs[_vfxName].vfx.SetActive(false);
-        gameVFXs[_vfxName].vfx.SetActive(true);
+        GameObject vfx = GetVFX(_vfxName);
+        vfx.SetActive(false);
+        vfx.SetActive(true);
+    }
+    
+    private GameObject GetVFX(string _vfxName)
+    {
+        if (!gameVFXs.ContainsKey(_vfxName))
+            AddNewVFX(_vfxName);
+
+        foreach (GameObject vfx in  gameVFXs[_vfxName])
+        {
+            if(!vfx.activeSelf)
+                return vfx;
+        }
+
+        gameVFXs[_vfxName].Add(PoolManager.Instance.GetFromPool(_vfxName));
+        return gameVFXs[_vfxName][gameVFXs[_vfxName].Count - 1];
+    }
+    private void AddNewVFX(string _vfxName)
+    {
+        List<GameObject> vfxs = new List<GameObject>();
+        vfxs.Add(PoolManager.Instance.GetFromPool(_vfxName));
+        gameVFXs[_vfxName] = vfxs;
+
+        vfxs[vfxs.Count - 1].SetActive(false);
+        gameVfxes.Add(new GameVFX(_vfxName, vfxs));
+
+        if (vfxs[vfxs.Count - 1] == null)
+            Debug.Log("-- VFX Not Exist --");
     }
 
     #endregion
@@ -44,5 +92,11 @@ public class VFXManager : MonoBehaviour
 public struct GameVFX
 {
     public string Name;
-    public GameObject vfx;
+    public List<GameObject> vfxs;
+
+    public GameVFX(string _n, List<GameObject> _l)
+    {
+        Name = _n;
+        vfxs = _l;
+    }
 }

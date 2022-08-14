@@ -19,37 +19,43 @@ public class ParralexEffect : MonoBehaviour
 
     #region Main Methods
 
-    private void Awake()
+    public void Init()
     {
-        cachedPositions = parallexTransforms.Select(n => n.position).ToList();
+        StartCoroutine(StartParrallexEffect());
     }
 
-    private void Update()
+    private IEnumerator StartParrallexEffect()
     {
-        if (parallexTransforms[0].position.x <= endPos)
-        {
-            // -- CIRCULATING THE LIST SO THE NEXT PATCH WILL COME TO ZERO INDEX
-            cachedPatch = parallexTransforms[0];
-            for (int i = 0; i < parallexTransforms.Count; i++)
-            {
-                if (i == parallexTransforms.Count - 1)
-                    parallexTransforms[i] = cachedPatch;
-                else
-                    parallexTransforms[i] = parallexTransforms[i + 1];
-            }
+        cachedPositions = parallexTransforms.Select(n => n.position).ToList();
 
-            // -- AFTER CIRCULATING, ASSIGNING ORIGINAL POSITIONS SO THAT ENVIRONMENT PATCHES KEEP LOOPING
-            for (int i = 0; i < parallexTransforms.Count; i++)
-            {
-                parallexTransforms[i].position = cachedPositions[i];
-            }
-        }
-        else
+        while (true)
         {
-            foreach(Transform pt in parallexTransforms)
+            if (parallexTransforms[0].position.x <= endPos)
             {
-                pt.position -= new Vector3(parallexSpeed * Time.deltaTime, 0, 0);
+                // -- CIRCULATING THE LIST SO THE NEXT PATCH WILL COME TO ZERO INDEX
+                cachedPatch = parallexTransforms[0];
+                for (int i = 0; i < parallexTransforms.Count; i++)
+                {
+                    if (i == parallexTransforms.Count - 1)
+                        parallexTransforms[i] = cachedPatch;
+                    else
+                        parallexTransforms[i] = parallexTransforms[i + 1];
+                }
+
+                // -- AFTER CIRCULATING, ASSIGNING ORIGINAL POSITIONS SO THAT ENVIRONMENT PATCHES KEEP LOOPING
+                for (int i = 0; i < parallexTransforms.Count; i++)
+                {
+                    parallexTransforms[i].position = cachedPositions[i];
+                }
             }
+            else
+            {
+                foreach (Transform pt in parallexTransforms)
+                {
+                    pt.position -= new Vector3(parallexSpeed * Time.deltaTime, 0, 0);
+                }
+            }
+            yield return new WaitForEndOfFrame();
         }
     }
 

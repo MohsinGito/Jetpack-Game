@@ -17,6 +17,7 @@ public class MapPatch : MonoBehaviour
     public float bottomPos;
     public Vector2 minMaxX;
     public Vector2 minMaxY;
+    public List<Transform> patchCoinsPos;
     public List<Transform> electricObstaclePos;
 
     #endregion
@@ -30,6 +31,7 @@ public class MapPatch : MonoBehaviour
     private List<string> floorObstacles;
     private List<string> groundObstacles;
     private List<PoolObj> spawnedAssets;
+    private Transform[,] coinsPositions;
     private EnvironmentManager environmentManager;
 
     public Vector3 Position
@@ -49,9 +51,19 @@ public class MapPatch : MonoBehaviour
         environmentManager = _environmentManager;
 
         spawnedAssets = new List<PoolObj>();
+        coinsPositions = new Transform[9, 12];
         floorObstacles = PoolManager.Instance.GetPoolTags("Floor Obstacles");
         groundObstacles = PoolManager.Instance.GetPoolTags("Ground Obstacles");
         electricObstacles = PoolManager.Instance.GetPoolTags("Electrical Obstacles");
+
+        int listCount = 0;
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 12; j++, listCount++)
+            {
+                coinsPositions[i, j] = patchCoinsPos[listCount];
+            }
+        }
     }
 
     public void SetUpPatch(GameMap _mapData)
@@ -60,6 +72,8 @@ public class MapPatch : MonoBehaviour
         layerOne.sprite = _mapData.layerOne;
         layerTwo.sprite = _mapData.layerTwo;
         layerThree.sprite = _mapData.layerThree;
+
+        ResetPatch();
     }
 
     #endregion
@@ -76,35 +90,86 @@ public class MapPatch : MonoBehaviour
 
     public bool ReachedToDeadEnd()
     {
-        if(transform.position.x <= deadEnd)
+        if (transform.position.x <= deadEnd)
             return true;
         return false;
     }
 
     public void ResetPatch()
     {
-        foreach(PoolObj obj in spawnedAssets)
+        foreach (PoolObj obj in spawnedAssets)
             PoolManager.Instance.ReturnToPool(obj);
 
-        spawnedAssets.Clear();
         StopAllCoroutines();
+        spawnedAssets.Clear();
+    }
+
+    public void SpawnElements()
+    {
+        environmentManager.SpawnedPatches += 1;
+        if(environmentManager.SpawnedPatches % 10 == 0)
+        {
+            int randomInt = Random.Range(0, 2);
+            switch (randomInt)
+            {
+                case 0:
+                    SpawnPickUp(GameContants.SHIELD);
+                    break;
+                case 1:
+                    SpawnPickUp(GameContants.MAGNET);
+                    break;
+            }
+            return;
+        }
+
+        if (Random.Range(0, 3) == 1)
+        {
+            SpawnCoins(environmentManager.GetRandomCoinsPattern());
+        }
+        else
+        {
+            SpawnObstacles();
+            if (environmentManager.SpawnedPatches % 5 == 0)
+                SpawnPickUp(GameContants.BOMB);
+        }
+    }
+
+    #endregion
+
+    #region Patch Elements Spawning 
+
+    private void SpawnObstacles()
+    {
         SetUpFloorObstacles();
         SetupGroundAssets();
         SetUpElectricObstacles();
     }
 
-    #endregion
-
-    #region Patch Controlls Methods
-
-    public void DestroyAllObstacles()
+    private void SpawnCoins(ArrayLayout coinsPattern)
     {
-
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 12; j++)
+            {
+                if(coinsPattern.rows[i].row[j])
+                {
+                    spawnedAssets.Add(new PoolObj("Coin", PoolManager.Instance.GetFromPool("Coin")));
+                    spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.parent = transform;
+                    spawnedAssets[spawnedAssets.Count - 1].Prefab.GetComponent<CircleCollider2D>().enabled = true;
+                    spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                    spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.position = coinsPositions[i, j].position;
+                }
+            }
+        }
     }
 
-    public void PauseMovement()
+    private void SpawnPickUp(string pickUpTag)
     {
-
+        spawnedAssets.Add(new PoolObj(pickUpTag, PoolManager.Instance.GetFromPool(pickUpTag)));
+        spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.parent = transform;
+        spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.localPosition =
+            new Vector3(Random.Range(minMaxX.x, minMaxX.y), Random.Range(minMaxY.x, minMaxY.y), 0);
+        spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
     }
 
     #endregion
@@ -165,6 +230,27 @@ public class MapPatch : MonoBehaviour
         spawnedAssets.Add(new PoolObj(_assetName, PoolManager.Instance.GetFromPool(_assetName)));
         spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.parent = transform;
         spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.localPosition = _spawnPos;
+    }
+
+    public void DestroyAllObstacles()
+    {
+        bool canDestroy = true;
+        List<string> pickUpsTags = PoolManager.Instance.GetPoolTags("Power Up");
+        foreach (PoolObj obj in spawnedAssets)
+        {
+            canDestroy = true;
+            for (int i = 0; i < pickUpsTags.Count - 1; i++)
+            {
+                if (pickUpsTags[i].Equals(obj.Tag))
+                {
+                    canDestroy = false;
+                    break;
+                }
+            }
+
+            if (canDestroy)
+                environmentManager.DestroyMapElement(obj.Prefab);
+        }
     }
 
     #endregion

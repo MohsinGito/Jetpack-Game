@@ -12,121 +12,194 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f319a129b9c1d4276825a5d481fcba08, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  testBuild: 0
   resetGame: 0
-  scoresBoost: 1
-  coinsScores: 5
-  sessionScores: 0
-  gameEarnedScores: 0
+  gameEarnedCoins: 0
+  shieldDuration: 10
+  magnetDuration: 10
   gameStages:
   - stageName: Level 1
     layerOne: {fileID: 21300000, guid: 22f5f2d865a444c64abbb6980ff8a61a, type: 3}
     layerTwo: {fileID: 21300000, guid: 6d19c5771b08f4e94bd099a390039232, type: 3}
     layerThree: {fileID: 21300000, guid: 082a0cfb9da3c4a85bc1fa3223f30860, type: 3}
+    mapIndex: 0
   - stageName: Level 2
     layerOne: {fileID: 21300000, guid: 39519ddcc225b4b2abfd1ae9fbe9aa06, type: 3}
     layerTwo: {fileID: 21300000, guid: 39519ddcc225b4b2abfd1ae9fbe9aa06, type: 3}
     layerThree: {fileID: 21300000, guid: 39519ddcc225b4b2abfd1ae9fbe9aa06, type: 3}
+    mapIndex: 1
   - stageName: Level 3
     layerOne: {fileID: 21300000, guid: 4a9df581b6e2245e48b1128ad0c9f010, type: 3}
     layerTwo: {fileID: 21300000, guid: 4a9df581b6e2245e48b1128ad0c9f010, type: 3}
     layerThree: {fileID: 21300000, guid: 5b234b70fe1c04a0e865421798570400, type: 3}
+    mapIndex: 2
   - stageName: Level 3
     layerOne: {fileID: 21300000, guid: dc4168184c51248a18c2982d60072218, type: 3}
     layerTwo: {fileID: 21300000, guid: dc4168184c51248a18c2982d60072218, type: 3}
     layerThree: {fileID: 21300000, guid: b203e262c3b464775b757e6d0cbce897, type: 3}
+    mapIndex: 3
   gameCharacters:
-  - characterName: Charlie
+  - characterName: Aspect
     uiSprite: {fileID: 21300000, guid: 755f9c37a763f4c2590ea7969e596df3, type: 3}
     controller: {fileID: 9100000, guid: 08e1aef1b4d36f74babba4cf7e3ad41e, type: 2}
     unLocked: 1
     scoresCriteria: 0
-  - characterName: Bugs
+    characterIndex: 0
+  - characterName: Kraken
     uiSprite: {fileID: 21300000, guid: 943a8f7825d814589bc46d1cdc10e635, type: 3}
     controller: {fileID: 9100000, guid: 3bc0bcbb30cbe944da6a0cf809defd98, type: 2}
-    unLocked: 1
+    unLocked: 0
     scoresCriteria: 1000
-  - characterName: Dennis
+    characterIndex: 1
+  - characterName: Bender
     uiSprite: {fileID: 21300000, guid: b0c5d7c58116b40db91acebeee801ecd, type: 3}
     controller: {fileID: 9100000, guid: d6f6038abed3fb6428ece7c2d44e5c7e, type: 2}
-    unLocked: 1
+    unLocked: 0
     scoresCriteria: 10000
-  - characterName: Betty
+    characterIndex: 2
+  - characterName: Lynch
     uiSprite: {fileID: 21300000, guid: 6dab52c1797a046fca6166bd709e3008, type: 3}
     controller: {fileID: 9100000, guid: 209d68b23d22aef47854236aea4d66dc, type: 2}
-    unLocked: 1
+    unLocked: 0
     scoresCriteria: 25000
-  - characterName: Garfield
+    characterIndex: 3
+  - characterName: O'Doyle
     uiSprite: {fileID: 21300000, guid: f2870c04633be494da46988a6111a7df, type: 3}
     controller: {fileID: 9100000, guid: 5fecc32204696a24db71f8bc4abbf509, type: 2}
-    unLocked: 1
+    unLocked: 0
     scoresCriteria: 50000
-  - characterName: Yogi
+    characterIndex: 4
+  - characterName: Scar
     uiSprite: {fileID: 21300000, guid: a2203f590d54d49b586b85c0d1a698fb, type: 3}
     controller: {fileID: 9100000, guid: 146953deab58b2b429b952678002226c, type: 2}
     unLocked: 0
     scoresCriteria: 100000
-  gameFlyingEnemies:
-  - enemyName: Bat
-    animationSprites:
-    - {fileID: 21300000, guid: 32df3d41fce6546febdc1050cf6b1bc6, type: 3}
-    - {fileID: 21300000, guid: 9c7fd9fe3937b48909778cb96b8d6355, type: 3}
-    - {fileID: 21300000, guid: cc8f5ef7e5c5e4da6ba9617f230e82ce, type: 3}
-    - {fileID: 21300000, guid: 97167e5d23da4481685ea8636967fdc3, type: 3}
-  - enemyName: Bee
-    animationSprites:
-    - {fileID: 21300000, guid: 33188d13b79654980aa3e1dc98d479ec, type: 3}
-    - {fileID: 21300000, guid: 391c959c7b86249cb87f55742f535dc8, type: 3}
-  - enemyName: Bird
-    animationSprites:
-    - {fileID: 21300000, guid: c35b1f32cc4314ce0af1b6c1f9d9d4ed, type: 3}
-    - {fileID: 21300000, guid: 652380db460454f9381a664a91d3ecc1, type: 3}
-    - {fileID: 21300000, guid: e31a0ab1ddf2240aebf9532ec5364db3, type: 3}
-    - {fileID: 21300000, guid: faa1c63d02ccd460990f876390fa8179, type: 3}
-  gameCrawlingEnemies:
-  - enemyName: Crab
-    animationSprites:
-    - {fileID: 21300000, guid: 1ef1585a4835846aa824bc6a21dc5fc1, type: 3}
-    - {fileID: 21300000, guid: 494aee7031d7542fcaf49d8a2b855419, type: 3}
-  - enemyName: Evil Flower One
-    animationSprites:
-    - {fileID: 21300000, guid: c60831f4e315847d49dcd157d42e92d2, type: 3}
-    - {fileID: 21300000, guid: 85b81f7ba9bf541d38a24039b93bb340, type: 3}
-    - {fileID: 21300000, guid: 98eca32e4937547b78b329ec9ff3a608, type: 3}
-    - {fileID: 21300000, guid: 1c6b0bca84cd746edbcddead583575f9, type: 3}
-  - enemyName: Evil Flower Two
-    animationSprites:
-    - {fileID: 21300000, guid: d2324a58320ae44fca02776f33292cf3, type: 3}
-    - {fileID: 21300000, guid: 1b266d03b0ec448408e25076aab817a7, type: 3}
-    - {fileID: 21300000, guid: 9e1e8b781a9384f0fb0c900e49264882, type: 3}
-    - {fileID: 21300000, guid: 5a4f28b6827164405a2006fddf3cc9a4, type: 3}
-  - enemyName: Penguine
-    animationSprites:
-    - {fileID: 21300000, guid: ef8d8dc8ac35244f79d804b26c6e50aa, type: 3}
-    - {fileID: 21300000, guid: 919e18d43f7864657a2d245442c34893, type: 3}
-    - {fileID: 21300000, guid: dab7421011df642b68f65ab33b0dea2c, type: 3}
-  - enemyName: Snail
-    animationSprites:
-    - {fileID: 21300000, guid: eb367bef30f00450a9869715be80c7b5, type: 3}
-    - {fileID: 21300000, guid: c1e1db5ca704549a6b0f4c0624f253ae, type: 3}
-  - enemyName: Tentacle
-    animationSprites:
-    - {fileID: 21300000, guid: 8690457bbec4e4f7b93081a45ff75c1d, type: 3}
-    - {fileID: 21300000, guid: 94efd485e81aa401d9d620d88dcdb459, type: 3}
-    - {fileID: 21300000, guid: a50fdd78d762e416b85ee11353407bb2, type: 3}
-    - {fileID: 21300000, guid: ad2df1e981d0e47fb9846c1841e9668d, type: 3}
-  selectedStage:
-    stageName: Level 1
-    layerOne: {fileID: 21300000, guid: 7795cc7c2d4a1439e8a79c61df2574cc, type: 3}
-    layerTwo: {fileID: 21300000, guid: 5a90946e6d47b4ff09cee54c058f0977, type: 3}
-    layerThree: {fileID: 21300000, guid: 8eb7df6f796b74ed29b38f37a42b79cd, type: 3}
-  selectedCharacter:
-    characterName: Charlie
-    uiSprite: {fileID: 0}
-    controller: {fileID: 0}
-    unLocked: 1
-    scoresCriteria: 0
+    characterIndex: 0
+  coinsPatterns:
+  - grid: {fileID: 0}
+    rows:
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 000000000000000000000000
+    - row: 000000000000000000000000
+    - row: 000000000000000000000000
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+  - grid: {fileID: 0}
+    rows:
+    - row: 010101010100000101010101
+    - row: 010101010000000001010101
+    - row: 010101000000000000010101
+    - row: 010100000000000000000101
+    - row: 010000000000000000000001
+    - row: 010100000000000000000101
+    - row: 010101000000000000010101
+    - row: 010101010000000001010101
+    - row: 010101010100000101010101
+  - grid: {fileID: 0}
+    rows:
+    - row: 000000000000000000000000
+    - row: 010000000000000000000001
+    - row: 010100000000000000000101
+    - row: 000101000000000000010100
+    - row: 000001010000000001010000
+    - row: 010101010100000101010101
+    - row: 010101010101010101010101
+    - row: 000000000001010000000000
+    - row: 000000000001010000000000
+  - grid: {fileID: 0}
+    rows:
+    - row: 000000010000000001000000
+    - row: 000001010100000101010000
+    - row: 000000000000000000000000
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 000000000000000000000000
+    - row: 000001010100000101010000
+    - row: 000000010000000001000000
+  - grid: {fileID: 0}
+    rows:
+    - row: 000001000000000001000000
+    - row: 000101010000000101010000
+    - row: 000101010100010101010000
+    - row: 000101010101010101010000
+    - row: 000001010101010101000000
+    - row: 000000010101010100000000
+    - row: 000000000101010000000000
+    - row: 000000000001000000000000
+    - row: 000000000000000000000000
+  - grid: {fileID: 0}
+    rows:
+    - row: 010101010001010101000101
+    - row: 010101010001010101000101
+    - row: 000101010000010100000101
+    - row: 000101000000010100000101
+    - row: 000101000000010100000101
+    - row: 000101010000010100000101
+    - row: 010101010001010101000101
+    - row: 010101010001010101000101
+    - row: 010101010001010101000101
+  - grid: {fileID: 0}
+    rows:
+    - row: 000001000000010101000000
+    - row: 000101010000010101010000
+    - row: 010101010100010101010000
+    - row: 010101010100010101000000
+    - row: 010101010100010100000000
+    - row: 010100010100010101000000
+    - row: 010100010100010101010000
+    - row: 010100010100010101010000
+    - row: 010100010100010101000000
+  - grid: {fileID: 0}
+    rows:
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 010100000100000100000101
+    - row: 010100000100000100000101
+    - row: 010101010101010101010101
+    - row: 010100000100000100000101
+    - row: 010100000100000100000101
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+  - grid: {fileID: 0}
+    rows:
+    - row: 010001010101010101010001
+    - row: 000100010101010101000100
+    - row: 010001000101010100010000
+    - row: 010100010001010001000101
+    - row: 010101000100000100010101
+    - row: 010101010001010001010101
+    - row: 010101010001010001010101
+    - row: 010101000101010100010101
+    - row: 010100010101010101000101
+  - grid: {fileID: 0}
+    rows:
+    - row: 000000000101010100000000
+    - row: 000000000101010100000000
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 000000000000000000000000
+    - row: 010101010101010101010101
+    - row: 010101010101010101010101
+    - row: 000000000101010100000000
+    - row: 000000000101010100000000
   sfxOn: 1
   musicOn: 1
   gameInitialized: 1
+  selectedMap:
+    stageName: Level 1
+    layerOne: {fileID: 21300000, guid: 22f5f2d865a444c64abbb6980ff8a61a, type: 3}
+    layerTwo: {fileID: 21300000, guid: 6d19c5771b08f4e94bd099a390039232, type: 3}
+    layerThree: {fileID: 21300000, guid: 082a0cfb9da3c4a85bc1fa3223f30860, type: 3}
+    mapIndex: 0
+  selectedCharacter:
+    characterName: 
+    uiSprite: {fileID: 0}
+    controller: {fileID: 0}
+    unLocked: 0
+    scoresCriteria: 0
+    characterIndex: 0
+  sessionCoins: 0
   restartGame: 0

@@ -49,7 +49,7 @@ public class PoolManager : ObjectPooler
             }
         }
     }
-
+    
     public GameObject GetFromPool(string tag)
     {
         GameObject newObj = Get(tag);
@@ -79,6 +79,9 @@ public class PoolManager : ObjectPooler
 
     public void ReturnToPool(PoolObj objInfo)
     {
+        if (string.IsNullOrEmpty(objInfo.Tag) || objInfo.Prefab == null)
+            return;
+
         if (Put(objInfo.Tag, objInfo.Prefab))
         {
             Log("Item Added To Pool With Tag ('" + tag + "')");

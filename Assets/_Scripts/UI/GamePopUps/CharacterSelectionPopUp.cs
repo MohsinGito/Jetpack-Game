@@ -89,15 +89,15 @@ public class CharacterSelectionPopUp : GamePopUp
         displayImage.color = gameData.gameCharacters[currentCharacterIndex].unLocked ? Color.white : Color.black;
         selectCharacterButton.interactable = gameData.gameCharacters[currentCharacterIndex].unLocked;
         infoText.gameObject.SetActive(!gameData.gameCharacters[currentCharacterIndex].unLocked);
-        infoText.text = "Reach Up To " + gameData.gameCharacters[currentCharacterIndex].scoresCriteria + " Scores To Unlock This Character!";
+        infoText.text = "Earn Up To " + gameData.gameCharacters[currentCharacterIndex].scoresCriteria + " Coins To Unlock This Character!";
     }
 
     private void SelectCharacter()
     {
-        callbackEvent?.Invoke();
         gameData.selectedCharacter = gameData.gameCharacters[currentCharacterIndex];
         gameData.selectedCharacter.characterIndex = currentCharacterIndex;
         AudioController.Instance.PlayAudio(AudioName.UI_SFX);
+        callbackEvent?.Invoke();
     }
 
     #endregion

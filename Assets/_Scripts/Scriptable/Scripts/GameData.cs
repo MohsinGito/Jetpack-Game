@@ -7,26 +7,25 @@ public class GameData : ScriptableObject
 
     #region Main Attributes
 
-    public bool testBuild;
     public bool resetGame;
 
     [Header("-- In Game Data --")]
-    public int scoresBoost;
-    public int coinsScores;
-    public int sessionScores;
-    public int gameEarnedScores;
+    public int gameEarnedCoins;
+    public float shieldDuration;
+    public float magnetDuration;
     public List<GameMap> gameStages;
     public List<GameCharacter> gameCharacters;
-
-    [Header("-- Player Selection --")]
-    [HideInInspector] public GameMap selectedMap;
-    [HideInInspector] public GameCharacter selectedCharacter;
+    public List<ArrayLayout> coinsPatterns;
 
     [Header("-- Game Settings --")]
     public bool sfxOn;
     public bool musicOn;
     public bool gameInitialized;
 
+    // -- PLAYER SELECTION
+    [HideInInspector] public GameMap selectedMap;
+    [HideInInspector] public GameCharacter selectedCharacter;
+    [HideInInspector] public int sessionCoins;
     [HideInInspector] public bool restartGame;
 
     #endregion
@@ -35,8 +34,22 @@ public class GameData : ScriptableObject
 
     public void CheckGameUnlockedElements()
     {
+
+        if(resetGame)
+        {
+            sessionCoins = 0;
+            gameEarnedCoins = 0;
+            selectedMap = new GameMap();
+            selectedCharacter = new GameCharacter();
+        }
+
         for (int i = 0; i < gameCharacters.Count; i++)
-            gameCharacters[i].unLocked = gameEarnedScores >= gameCharacters[i].scoresCriteria;
+            gameCharacters[i].unLocked = gameEarnedCoins >= gameCharacters[i].scoresCriteria;
+    }
+
+    public ArrayLayout GetNewCoinsPattern()
+    {
+        return coinsPatterns[Random.Range(0, coinsPatterns.Count)];
     }
 
     #endregion

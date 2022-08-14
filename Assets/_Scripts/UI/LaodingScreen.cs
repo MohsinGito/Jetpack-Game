@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityCore.Scene;
 using Utilities.Audio;
+using System.Collections.Generic;
 
 public class LaodingScreen : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class LaodingScreen : MonoBehaviour
 
     private void Start()
     {
+        CacheGameObjectsForReusing();
         StartCoroutine(DisplayLoadingProgess());
         AudioController.Instance.PlayAudio(AudioName.MENU_BG_MUSIC);
     }
@@ -53,6 +55,16 @@ public class LaodingScreen : MonoBehaviour
 
         loadingScreen.SetActive(false);
         playButton.gameObject.SetActive(true);
+    }
+
+    private void CacheGameObjectsForReusing()
+    {
+        List<PoolObj> tempList = new List<PoolObj>();
+        for(int i = 0; i < 200; i++)
+            tempList.Add(new PoolObj(GameContants.COIN, PoolManager.Instance.GetFromPool(GameContants.COIN)));
+
+        for (int i = 0; i < 200; i++)
+            PoolManager.Instance.ReturnToPool(tempList[i]);
     }
 
     #endregion

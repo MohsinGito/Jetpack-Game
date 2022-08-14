@@ -2,26 +2,34 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using Utilities.Audio;
+using System.Collections;
+using System.Collections.Generic;
+using System;
+using GameControllers;
+using TMPro;
 
-public class UIManager : MonoBehaviour
+public class UIManager : GameState
 {
 
     #region Public Attributes
 
-    public Transform dummy;
     public GameplayPopupsManager gameplayPopupsManager;
 
     [Header("-- UI Elements --")]
     public Button pauseButton;
+    public TMP_Text gameCoinsText;
     public RectTransform missleIndecator;
 
     #endregion
 
     #region Private Attributes
 
+    private float nextYPos;
+    private float lockedYPos;
     private GameData gameData;
     private GameManager gameManager;
     private RectTransform mainCanvas;
+    private Animator missileAnimator;
 
     #endregion
 
@@ -32,16 +40,39 @@ public class UIManager : MonoBehaviour
         gameData = _gameData;
         gameManager = _gameManager;
         mainCanvas = GetComponent<RectTransform>();
+        missileAnimator = missleIndecator.GetChild(0).GetComponent<Animator>();
+        gameCoinsText.text = gameData.gameEarnedCoins + "";
 
         gameplayPopupsManager.Init(_gameData);
         pauseButton.onClick.AddListener(PauseButtonAction);
+        gameData.CheckGameUnlockedElements();
 
         SetUpInitialPopUps();
     }
 
-    private void Update()
+    public void DisplayGameplayUI()
     {
-        MissleIndication(dummy, true);
+        gameCoinsText.text = gameData.sessionCoins + "";
+        pauseButton.GetComponent<RectTransform>().parent.DOScale(Vector3.one, 0.25f);
+        gameCoinsText.GetComponent<RectTransform>().parent.DOScale(Vector3.one, 0.25f);
+    }
+
+    public void IncrementSessionCoins()
+    {
+        gameData.sessionCoins += 1;
+        gameData.gameEarnedCoins += 1;
+        gameCoinsText.text = gameData.sessionCoins + "";
+    }
+
+    public override void OnPlayerDied()
+    {
+        HideIndication();
+        DOVirtual.DelayedCall(1.5f, () =>
+        {
+            HideIndication();
+            ShowGameEndPopUp();
+            GameSession.EndGame();
+        });
     }
 
     #endregion
@@ -62,6 +93,14 @@ public class UIManager : MonoBehaviour
 
     private void SetUpInitialPopUps()
     {
+        if(gameData.restartGame)
+        {
+            gameManager.GameStarted();
+            gameData.restartGame = false;
+            gameplayPopupsManager.popUpBG.SetActive(false);
+            return;
+        }
+
         gameplayPopupsManager.DisplayPopUp(PopUp.MAP_SELECTION, delegate
         {
             gameplayPopupsManager.DisplayPopUp(PopUp.CHARACTER_SELECTION, delegate
@@ -75,11 +114,13 @@ public class UIManager : MonoBehaviour
 
     private void PauseButtonAction()
     {
+        Time.timeScale = 0;
         gameplayPopupsManager.DisplayPopUp(PopUp.GAME_PAUSE, delegate
         {
+            Time.timeScale = 1;
             gameplayPopupsManager.HidePopUp(PopUp.GAME_PAUSE);
             DOVirtual.DelayedCall(0.25f, delegate { gameplayPopupsManager.DisplayPopUp(PopUp.NONE); });
-        });
+        }, false);
 
         AudioController.Instance.PlayAudio(AudioName.UI_SFX);
     }
@@ -88,11 +129,38 @@ public class UIManager : MonoBehaviour
 
     #region Utilities
 
-    public void MissleIndication(Transform pos, bool visibility)
+    public void HideIndication()
     {
-        missleIndecator.gameObject.SetActive(visibility);
-        missleIndecator.anchoredPosition = new Vector2(missleIndecator.anchoredPosition.x,
-            Helper.WorldToUI(mainCanvas, pos.position).y);
+        StopAllCoroutines();
+        missileAnimator.CrossFade("Idle", 0);
+        missleIndecator.gameObject.SetActive(false);
+    }
+
+    public void DisplayMissileIndication(float _indicationTime, Transform _relativeTransform, Action<float> callback)
+    {
+        StartCoroutine(StartDisplaying());
+        IEnumerator StartDisplaying()
+        {
+            missileAnimator.CrossFade("Idle", 0);
+            missleIndecator.gameObject.SetActive(true);
+
+            while (_indicationTime > 0)
+            {
+                nextYPos = Mathf.Clamp(Helper.WorldToUI(mainCanvas, new Vector2(0, _relativeTransform.position.y)).y, -432f, 432f);
+                missleIndecator.anchoredPosition = new Vector2(missleIndecator.anchoredPosition.x, nextYPos);
+
+                _indicationTime -= Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+
+            lockedYPos = _relativeTransform.position.y;
+            missileAnimator.CrossFade("IndicationAnim", 0);
+
+            yield return new WaitForSeconds(1f);
+
+            missleIndecator.gameObject.SetActive(false);
+            callback?.Invoke(lockedYPos);
+        }
     }
 
     #endregion

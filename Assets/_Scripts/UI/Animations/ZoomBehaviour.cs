@@ -52,9 +52,9 @@ public class ZoomBehaviour : MonoBehaviour
                     continue;
 
                 if (zoomComponent.sequential)
-                    yield return zoomInfo.m_Rect.DOScale(Vector3.one, zoomInfo.displaySpeed).WaitForCompletion();
+                    yield return zoomInfo.m_Rect.DOScale(Vector3.one, zoomInfo.displaySpeed).SetUpdate(true).WaitForCompletion();
                 else
-                    zoomInfo.m_Rect.DOScale(Vector3.one, zoomInfo.displaySpeed);
+                    zoomInfo.m_Rect.DOScale(Vector3.one, zoomInfo.displaySpeed).SetUpdate(true);
             }
         }
     }
@@ -66,7 +66,7 @@ public class ZoomBehaviour : MonoBehaviour
         {
             foreach (Zoom zoomInfo in zoomComponent.zoomInfos)
             {
-                zoomInfo.m_Rect.DOScale(Vector3.zero, zoomInfo.hideSpeed);
+                zoomInfo.m_Rect.DOScale(Vector3.zero, zoomInfo.hideSpeed).SetUpdate(true);
             }
         }
     }
