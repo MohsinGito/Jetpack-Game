@@ -13,10 +13,14 @@ public class CFX_AutoDestructShuriken : MonoBehaviour
 	// If true, deactivate the object instead of destroying it
 	public bool OnlyDeactivate;
 	public bool ForceFullyDeactivate;
+	public bool keepAlive;
 	public float DeactivateTime;
 	
 	void OnEnable()
 	{
+		if (keepAlive)
+			return;
+
 		StartCoroutine("CheckIfAlive");
 	}
 	

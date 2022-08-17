@@ -217,18 +217,6 @@ public static class Helper
         return (Time.realtimeSinceStartup / 60) > 10;
     }
 
-    public static void ClearCache(this List<ApiRequest> objList, int itemsMaxCount = 20)
-    {
-        /* -- CHECKING IF ALL REQUESTS ARE COMPLETED THEN WE CLEAR THE LIST -- */
-        if (objList.Find(n => n.isRequestCompleted == false) == null)
-        {
-            if (objList.Count > itemsMaxCount)
-            {
-                objList.Clear();
-            }
-        }
-    }
-
     #endregion
 
     #region Strings Operation

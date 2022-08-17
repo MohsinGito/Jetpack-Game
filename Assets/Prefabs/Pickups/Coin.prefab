@@ -115,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6198873923082928073}
   - component: {fileID: 8440345848920763819}
+  - component: {fileID: 5521885333964946803}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -135,7 +136,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6198873922042805751}
-  - {fileID: 5964744800736661465}
+  - {fileID: 4681197394116360407}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -155,69 +156,52 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.003992431}
   serializedVersion: 2
   m_Radius: 0.25167203
---- !u!1001 &3649327512435430179
-PrefabInstance:
+--- !u!114 &5521885333964946803
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6198873923082928073}
-    m_Modifications:
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070431962, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_Name
-      value: Pickup Effect
-      objectReference: {fileID: 0}
-    - target: {fileID: 6945117710070431962, guid: 631aff26955282144b269973f25b67c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 631aff26955282144b269973f25b67c1, type: 3}
---- !u!4 &5964744800736661465 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6945117710070209786, guid: 631aff26955282144b269973f25b67c1, type: 3}
-  m_PrefabInstance: {fileID: 3649327512435430179}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6198873923082928074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37814f6de1fb59b4285c4eab120cee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetSprites:
+  - {fileID: 6198873922042805750}
+  assetBoxColliders: []
+  assetCircleColliders:
+  - {fileID: 8440345848920763819}
+  vfxPos: {fileID: 4681197394116360407}
+--- !u!1 &7405393246102047100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4681197394116360407}
+  m_Layer: 0
+  m_Name: Coin Pickup Effect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4681197394116360407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405393246102047100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6198873923082928073}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

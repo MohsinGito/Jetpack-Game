@@ -26,6 +26,7 @@ public class GameData : ScriptableObject
     [HideInInspector] public GameMap selectedMap;
     [HideInInspector] public GameCharacter selectedCharacter;
     [HideInInspector] public int sessionCoins;
+    [HideInInspector] public int currentMapIndex;
     [HideInInspector] public bool restartGame;
 
     #endregion
@@ -45,6 +46,14 @@ public class GameData : ScriptableObject
 
         for (int i = 0; i < gameCharacters.Count; i++)
             gameCharacters[i].unLocked = gameEarnedCoins >= gameCharacters[i].scoresCriteria;
+    }
+
+    public void SelectRandomGameMap()
+    {
+        if (currentMapIndex == gameStages.Count)
+            currentMapIndex = 0;
+        
+        selectedMap = gameStages[currentMapIndex++];
     }
 
     public ArrayLayout GetNewCoinsPattern()

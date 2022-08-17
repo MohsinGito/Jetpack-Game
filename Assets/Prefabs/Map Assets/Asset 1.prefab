@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3276667558572380521}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: -0.8, y: 1.307, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6167264864875517544}
   - component: {fileID: 8983744024005966226}
   - component: {fileID: 488831404201340541}
+  - component: {fileID: 7922762073945021957}
   m_Layer: 0
   m_Name: Asset 1
   m_TagString: Obstacle
@@ -198,6 +199,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9784175, y: 2.2533352}
   m_EdgeRadius: 0
+--- !u!114 &7922762073945021957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478531805007402390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37814f6de1fb59b4285c4eab120cee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetSprites:
+  - {fileID: 7317923612720935001}
+  assetBoxColliders:
+  - {fileID: 6167264864875517544}
+  - {fileID: 8983744024005966226}
+  - {fileID: 488831404201340541}
+  assetCircleColliders: []
+  vfxPos: {fileID: 5254923899807832926}
 --- !u!1 &9040383401527062699
 GameObject:
   m_ObjectHideFlags: 0

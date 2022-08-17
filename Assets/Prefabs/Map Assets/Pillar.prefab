@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8109184468482622279}
   - component: {fileID: 8447529334576323616}
   - component: {fileID: 6278844080977195944}
+  - component: {fileID: 7989410224589869015}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Obstacle
@@ -118,6 +119,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5762348, y: 0.39975667}
   m_EdgeRadius: 0
+--- !u!114 &7989410224589869015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724945374448814163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37814f6de1fb59b4285c4eab120cee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetSprites:
+  - {fileID: 6988365087041907167}
+  assetBoxColliders:
+  - {fileID: 8447529334576323616}
+  - {fileID: 6278844080977195944}
+  assetCircleColliders: []
+  vfxPos: {fileID: 4374972580190537055}
 --- !u!1 &7009989074098026297
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class PlayerController : GameState
     #region Public Attributes
 
     public float moveForce;
+    public float gravityUp;
+    public float gravityDown;
     public Vector2 minMaxY;
     public GameObject playerDieEffect;
 
@@ -24,10 +26,12 @@ public class PlayerController : GameState
     private bool canDie;
     private bool beginFlyUp;
     private bool controllsEnabled;
+    private SpriteRenderer jetpackSmoke;
     private Animator m_animator;
     private Rigidbody2D m_rigidbody;
     private UIManager uiManager;
     private EnvironmentManager envManager;
+    private Tween smokeTween;
 
     #endregion
 
@@ -36,8 +40,9 @@ public class PlayerController : GameState
     public void Init(EnvironmentManager _environmentManager, RuntimeAnimatorController _playerAnimator, UIManager _uiManager)
     {
         // -- CACHING MAIN COMPONENTS
-        m_animator = GetComponentInChildren<Animator>();
         m_rigidbody = GetComponent<Rigidbody2D>();
+        m_animator = GetComponentInChildren<Animator>();
+        jetpackSmoke = transform.GetChild(1).GetComponent<SpriteRenderer>();
 
         canDie = true;
         uiManager = _uiManager;
@@ -47,16 +52,19 @@ public class PlayerController : GameState
 
     public override void OnGameStart()
     {
+        AudioController.Instance.PlayAudio(AudioName.JETPACK_SFX);
+
         // -- THE PLAYER IS MOVING TOWARDS THE INITIAL POSITION (IN THE CENTER OF SCREEN)
         transform.position = new Vector3(-10f, 0f, 0f);
-
         transform.DOMove(new Vector3(-1f, 0f, 0f), 1.5f).SetEase(Ease.Unset).OnComplete(() =>
         {
             // -- AFTER REACHING TO INITIAL POSITION, PLAYER CONTROLLS WILL BE ENABLED
+            PlayerSmoke(false);
             controllsEnabled = true;
             m_rigidbody.velocity = Vector2.zero;
             m_rigidbody.bodyType = RigidbodyType2D.Dynamic;
             uiManager.DisplayGameplayUI();
+            AudioController.Instance.StopAudio(AudioName.JETPACK_SFX);
         });
 
         bodyCollider.Init(this);
@@ -79,7 +87,8 @@ public class PlayerController : GameState
         if (Input.GetMouseButtonDown(0) && !Helper.IsCursorOverUI())
         {
             beginFlyUp = true;
-            
+            PlayerSmoke(true);
+
             // -- RESETING PLAYER VELOCITY SO THAT HE CAN MOVE UP GRADUALLY
             m_rigidbody.velocity = Vector2.zero;
         }
@@ -88,6 +97,7 @@ public class PlayerController : GameState
         {
             // -- IF PLAYER IS NOT PRESSING MOUSE BUTTON HE CAN'T FLY SO HE'LL START FALLING
             beginFlyUp = false;
+            PlayerSmoke(false);
         }
 
         // -- IF PLAYER TOCHES THE CEILING WE DON'T NEED TO ACCELERATE IT'S VELOCITY
@@ -110,6 +120,7 @@ public class PlayerController : GameState
             m_rigidbody.AddForce(Vector2.up * moveForce, ForceMode2D.Force);
         }
 
+        m_rigidbody.velocity = new Vector2(0, Mathf.Clamp(m_rigidbody.velocity.y, gravityDown, gravityUp));
         // -- AND IF HE DON'T CLICK MOUSE BUTTON, HE'LL START FALLING IN DOWNWARD DIRECTION THROUGH RIGIDBODY
     }
 
@@ -119,14 +130,31 @@ public class PlayerController : GameState
             return;
 
         controllsEnabled = false;
+        jetpackSmoke.enabled = false;
         playerDieEffect.gameObject.SetActive(true);
         bodyCollider.CollisionDectection(false);
         shieldCollider.CollisionDectection(false);
         magnetCollider.CollisionDectection(false);
-        transform.GetChild(1).gameObject.SetActive(false);
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.black;
         m_rigidbody.AddForce(transform.forward * 100f, ForceMode2D.Force);
+        AudioController.Instance.StopAudio(AudioName.JETPACK_SFX);
         GameSession.PlayerDied();
+    }
+
+    private void PlayerSmoke(bool val)
+    {
+        DOTween.Kill(smokeTween);
+
+        if (val)
+        {
+            smokeTween = jetpackSmoke.DOFade(1, 0.5f);
+            AudioController.Instance.PlayAudio(AudioName.JETPACK_SFX);
+        }
+        else
+        {
+            smokeTween = jetpackSmoke.DOFade(0, 0.5f);
+            AudioController.Instance.StopAudio(AudioName.JETPACK_SFX);
+        }
     }
 
     #endregion
@@ -166,9 +194,9 @@ public class PlayerController : GameState
     public void SimpleCoinCollision(GameObject collisionObj)
     {
         uiManager.IncrementSessionCoins();
-        collisionObj.transform.GetChild(1).gameObject.SetActive(true);
         collisionObj.GetComponent<CircleCollider2D>().enabled = false;
         collisionObj.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+        VFXManager.Instance.DisplayVFX("Coin Pickup Effect", collisionObj.transform.GetChild(1), true);
         AudioController.Instance.PlayAudio(AudioName.COIN_COLLECT);
     }
 
@@ -179,8 +207,8 @@ public class PlayerController : GameState
         collisionObj.transform.DOMove(transform.position, 0.35f).OnComplete(() =>
         {
             collisionObj.SetActive(false);
-            AudioController.Instance.PlayAudio(AudioName.COIN_COLLECT);
             collisionObj.transform.GetChild(0).GetComponent<SpriteRenderer>().DOFade(1, 0.01f);
+            AudioController.Instance.PlayAudio(AudioName.COIN_COLLECT);
         });
     }
 

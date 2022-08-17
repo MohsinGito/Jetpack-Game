@@ -7,11 +7,6 @@ public class MapPatch : MonoBehaviour
 
     #region Public Attributes
 
-    [Header("-- Background Info --")]
-    public SpriteRenderer layerOne;
-    public SpriteRenderer layerTwo;
-    public SpriteRenderer layerThree;
-
     [Header("-- Environment Assets Spawn Info --")]
     public float floorPos;
     public float bottomPos;
@@ -69,10 +64,6 @@ public class MapPatch : MonoBehaviour
     public void SetUpPatch(GameMap _mapData)
     {
         initialized = true;
-        layerOne.sprite = _mapData.layerOne;
-        layerTwo.sprite = _mapData.layerTwo;
-        layerThree.sprite = _mapData.layerThree;
-
         ResetPatch();
     }
 
@@ -107,30 +98,39 @@ public class MapPatch : MonoBehaviour
     public void SpawnElements()
     {
         environmentManager.SpawnedPatches += 1;
-        if(environmentManager.SpawnedPatches % 10 == 0)
+        if(environmentManager.spawnPickups)
         {
-            int randomInt = Random.Range(0, 2);
-            switch (randomInt)
+            if(environmentManager.SpawnedPatches % 10 == 0)
             {
-                case 0:
-                    SpawnPickUp(GameContants.SHIELD);
-                    break;
-                case 1:
-                    SpawnPickUp(GameContants.MAGNET);
-                    break;
+                int randomInt = Random.Range(0, 2);
+                switch (randomInt)
+                {
+                    case 0:
+                        SpawnPickUp(GameContants.SHIELD);
+                        break;
+                    case 1:
+                        SpawnPickUp(GameContants.MAGNET);
+                        break;
+                }
+                return;
             }
-            return;
         }
 
-        if (Random.Range(0, 3) == 1)
+        if (environmentManager.spawnCoins)
         {
-            SpawnCoins(environmentManager.GetRandomCoinsPattern());
+            if (Random.Range(0, 3) == 1 && environmentManager.SpawnedPatches > 5)
+            {
+                SpawnCoins(environmentManager.GetRandomCoinsPattern());
+                return;
+            }
         }
-        else
+
+        if (environmentManager.spawnObstacles)
         {
             SpawnObstacles();
             if (environmentManager.SpawnedPatches % 5 == 0)
                 SpawnPickUp(GameContants.BOMB);
+            return;
         }
     }
 
@@ -155,8 +155,7 @@ public class MapPatch : MonoBehaviour
                 {
                     spawnedAssets.Add(new PoolObj("Coin", PoolManager.Instance.GetFromPool("Coin")));
                     spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.parent = transform;
-                    spawnedAssets[spawnedAssets.Count - 1].Prefab.GetComponent<CircleCollider2D>().enabled = true;
-                    spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                    spawnedAssets[spawnedAssets.Count - 1].Prefab.GetComponent<MapAsset>().SetActive(true);
                     spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.position = coinsPositions[i, j].position;
                 }
             }
@@ -169,7 +168,6 @@ public class MapPatch : MonoBehaviour
         spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.parent = transform;
         spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.localPosition =
             new Vector3(Random.Range(minMaxX.x, minMaxX.y), Random.Range(minMaxY.x, minMaxY.y), 0);
-        spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
     }
 
     #endregion
@@ -191,20 +189,20 @@ public class MapPatch : MonoBehaviour
 
     private void SetUpElectricObstacles()
     {
-        if (true)
+        if (environmentManager.SpawnedPatches % 2 == 0 && environmentManager.SpawnedPatches > 10)
+        {
+            for (int i = 0; i < electricObstaclePos.Count; i++)
+            {
+                SpawnNewElectricObstacle(electricObstaclePos[i].localPosition.x);
+            }
+        }
+        else
         {
             int randIndex = Random.Range(0, electricObstaclePos.Count);
             SpawnNewElectricObstacle(electricObstaclePos[randIndex].localPosition.x);
 
             if (Random.Range(0, 4) == 2)
                 StartCoroutine(RotateObstacle(spawnedAssets[spawnedAssets.Count - 1].Prefab.transform));
-        }
-        else
-        {
-            for (int i = 0; i < electricObstaclePos.Count; i++)
-            {
-                SpawnNewElectricObstacle(electricObstaclePos[i].localPosition.x);
-            }
         }
 
         void SpawnNewElectricObstacle(float xPos)
@@ -228,6 +226,7 @@ public class MapPatch : MonoBehaviour
     private void SpawnAssetAt(string _assetName, Vector3 _spawnPos)
     {
         spawnedAssets.Add(new PoolObj(_assetName, PoolManager.Instance.GetFromPool(_assetName)));
+        spawnedAssets[spawnedAssets.Count - 1].Prefab.GetComponent<MapAsset>().SetActive(true);
         spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.parent = transform;
         spawnedAssets[spawnedAssets.Count - 1].Prefab.transform.localPosition = _spawnPos;
     }

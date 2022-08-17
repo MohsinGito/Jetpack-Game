@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3332235482364129373}
   - component: {fileID: 3993303544058478988}
   - component: {fileID: 2418333201528564081}
+  - component: {fileID: 334075976100019128}
   m_Layer: 0
   m_Name: Wood Box 1
   m_TagString: Obstacle
@@ -87,6 +88,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9221679, y: 0.9439223}
   m_EdgeRadius: 0
+--- !u!114 &334075976100019128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639706452523613924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37814f6de1fb59b4285c4eab120cee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetSprites:
+  - {fileID: 6051454272147066450}
+  assetBoxColliders:
+  - {fileID: 3993303544058478988}
+  - {fileID: 2418333201528564081}
+  assetCircleColliders: []
+  vfxPos: {fileID: 7012058592604655602}
 --- !u!1 &5057710568119898205
 GameObject:
   m_ObjectHideFlags: 0

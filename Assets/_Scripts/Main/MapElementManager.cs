@@ -7,7 +7,7 @@ public class MapElementManager : GameState
     #region Public Attributes
 
     [Header("-- Map Elements --")]
-    public ParralexEffect groundParrallex;
+    public MapBackground backGroundParrallex;
     public EnemyController enemyController;
     public MissileController missileController;
 
@@ -23,16 +23,13 @@ public class MapElementManager : GameState
 
     #region Public Methods
 
-    public void Init(EnvironmentManager _environmentManager, UIManager _uiManger, PlayerController _player)
+    public void Init(EnvironmentManager _environmentManager, UIManager _uiManger, PlayerController _player, GameMap _mapData)
     {
         player = _player;
         uiManager = _uiManger;
         envManager = _environmentManager;
-    }
 
-    public override void OnGameStart()
-    {
-        //groundParrallex.Init();
+        backGroundParrallex.Init(envManager, _mapData);
         enemyController.Init(player.transform, envManager);
         missileController.Init(envManager, uiManager, player.transform);
     }
@@ -41,7 +38,6 @@ public class MapElementManager : GameState
     {
         enemyController.GameEnded();
         missileController.GameEnded();
-        groundParrallex.parallexSpeed = 0;
     }
 
     public void DestroyAllElements()

@@ -41,21 +41,21 @@ public class BodyCollider : PlayerCollider
         if (collision.CompareTag(GameContants.MAGNET))
         {
             player.ActivateMagnet();
-            collision.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            collision.gameObject.SetActive(false);
         }
 
         if (collision.CompareTag(GameContants.SHIELD))
         {
             player.ActivateShield();
-            collision.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            collision.gameObject.SetActive(false);
         }
 
         if (collision.CompareTag(GameContants.BOMB))
         {
             player.ActivateBomb();
             bombPickupEffect.SetActive(true);
+            collision.gameObject.SetActive(false);
             AudioController.Instance.PlayAudio(AudioName.BOMB_DESTROY);
-            collision.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 }

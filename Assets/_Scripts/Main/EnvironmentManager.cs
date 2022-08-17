@@ -23,6 +23,11 @@ public class EnvironmentManager : GameState
     public float startingPosition;
     public float deadEndPosition;
 
+    [Header("-- Debugging --")]
+    public bool spawnCoins;
+    public bool spawnObstacles;
+    public bool spawnPickups;
+
     #endregion
 
     #region Private Attributes
@@ -118,13 +123,29 @@ public class EnvironmentManager : GameState
     {
         if (element.activeSelf)
         {
-            element.SetActive(!visible);
-            string vfxName = element.transform.GetChild(1).name;
-            Vector3 obstaclePos = element.transform.position;
+            MapAsset mapAsset = element.GetComponent<MapAsset>();
+            if (mapAsset == null)
+            {
+                element.SetActive(!visible);
+                string vfxName = element.transform.GetChild(1).name;
+                Vector3 obstaclePos = element.transform.position;
 
-            VFXManager.Instance.DisplayVFX(vfxName, obstaclePos, true);
-            AudioController.Instance.PlayAudio((AudioName)Enum.
-                Parse(typeof(AudioName), Helper.GetConcatination(vfxName).ToUpper()));
+                VFXManager.Instance.DisplayVFX(vfxName, obstaclePos, true);
+                AudioController.Instance.PlayAudio((AudioName)Enum.
+                    Parse(typeof(AudioName), Helper.GetConcatination(vfxName).ToUpper()));
+            }
+            else
+            {
+                if (!mapAsset.IsActive)
+                    return;
+
+                string vfxName = mapAsset.vfxPos.name;
+                mapAsset.SetActive(!visible);
+
+                VFXManager.Instance.DisplayVFX(vfxName, mapAsset.vfxPos, true);
+                AudioController.Instance.PlayAudio((AudioName)Enum.
+                    Parse(typeof(AudioName), Helper.GetConcatination(vfxName).ToUpper()));
+            }
         }
     }
 

@@ -25,7 +25,8 @@
 
             ROCKET_DESTROY_EFFECT,
             BULLET_HIT_EFFECT,
-            WOOD_BOX_DESTROY_EFFECT
+            WOOD_BOX_DESTROY_EFFECT,
+            JETPACK_SFX
         }
     }
 }

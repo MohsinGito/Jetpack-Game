@@ -2,26 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VFXManager : MonoBehaviour
+public class VFXManager : Singleton<VFXManager>
 {
 
     #region Main Attributes
 
     [SerializeField] List<GameVFX> gameVfxes;
-     Dictionary<string, List<GameObject>> gameVFXs;
-
-    #endregion
-
-    #region Singleton
-
-    public static VFXManager Instance;
-    private void Awake()
-    {
-        if (!Instance)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
+    Dictionary<string, List<GameObject>> gameVFXs;
 
     #endregion
 
@@ -48,6 +35,21 @@ public class VFXManager : MonoBehaviour
         vfx.SetActive(false);
         vfx.SetActive(true);
         vfx.transform.position = _vfxPos;
+    }
+
+    public void DisplayVFX(string _vfxName, Transform _vfxParent, bool _usePoolManager = false)
+    {
+        GameObject vfx;
+
+        if (_usePoolManager)
+            vfx = GetVFX(_vfxName);
+        else
+            vfx = gameVFXs[_vfxName][0];
+
+        vfx.SetActive(false);
+        vfx.SetActive(true);
+        vfx.transform.parent = _vfxParent;
+        vfx.transform.localPosition = Vector3.zero;
     }
 
     public void DisplayVFX(string _vfxName)

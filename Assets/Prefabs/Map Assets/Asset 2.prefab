@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3460526357746138472}
   - component: {fileID: 4790726378597630416}
+  - component: {fileID: 4872570585110905687}
   m_Layer: 0
   m_Name: Asset 2
   m_TagString: Obstacle
@@ -60,6 +61,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0510337, y: 2.2979805}
   m_EdgeRadius: 0
+--- !u!114 &4872570585110905687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023357905087299270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37814f6de1fb59b4285c4eab120cee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetSprites:
+  - {fileID: 8890557891526049929}
+  assetBoxColliders:
+  - {fileID: 4790726378597630416}
+  assetCircleColliders: []
+  vfxPos: {fileID: 2242957313012294493}
 --- !u!1 &5104910291770584873
 GameObject:
   m_ObjectHideFlags: 0

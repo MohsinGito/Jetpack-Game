@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f319a129b9c1d4276825a5d481fcba08, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  resetGame: 0
+  resetGame: 1
   gameEarnedCoins: 0
   shieldDuration: 10
   magnetDuration: 10
@@ -189,11 +189,11 @@ MonoBehaviour:
   musicOn: 1
   gameInitialized: 1
   selectedMap:
-    stageName: Level 1
-    layerOne: {fileID: 21300000, guid: 22f5f2d865a444c64abbb6980ff8a61a, type: 3}
-    layerTwo: {fileID: 21300000, guid: 6d19c5771b08f4e94bd099a390039232, type: 3}
-    layerThree: {fileID: 21300000, guid: 082a0cfb9da3c4a85bc1fa3223f30860, type: 3}
-    mapIndex: 0
+    stageName: Level 3
+    layerOne: {fileID: 21300000, guid: dc4168184c51248a18c2982d60072218, type: 3}
+    layerTwo: {fileID: 21300000, guid: dc4168184c51248a18c2982d60072218, type: 3}
+    layerThree: {fileID: 21300000, guid: b203e262c3b464775b757e6d0cbce897, type: 3}
+    mapIndex: 3
   selectedCharacter:
     characterName: 
     uiSprite: {fileID: 0}
@@ -202,4 +202,5 @@ MonoBehaviour:
     scoresCriteria: 0
     characterIndex: 0
   sessionCoins: 0
+  currentMapIndex: 4
   restartGame: 0

@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Utilities.Audio;
 using System.Collections;
-using System.Collections.Generic;
 using System;
 using GameControllers;
 using TMPro;
@@ -71,7 +70,7 @@ public class UIManager : GameState
         {
             HideIndication();
             ShowGameEndPopUp();
-            GameSession.EndGame();
+            gameManager.EndGame();
         });
     }
 
@@ -101,15 +100,23 @@ public class UIManager : GameState
             return;
         }
 
-        gameplayPopupsManager.DisplayPopUp(PopUp.MAP_SELECTION, delegate
+        gameData.SelectRandomGameMap();
+        gameplayPopupsManager.DisplayPopUp(PopUp.CHARACTER_SELECTION, delegate
         {
-            gameplayPopupsManager.DisplayPopUp(PopUp.CHARACTER_SELECTION, delegate
-            {
-                gameManager.GameStarted();
-                gameplayPopupsManager.HidePopUp(PopUp.CHARACTER_SELECTION);
-                DOVirtual.DelayedCall(0.25f, delegate { gameplayPopupsManager.DisplayPopUp(PopUp.NONE); });
-            });
+            gameManager.GameStarted();
+            gameplayPopupsManager.HidePopUp(PopUp.CHARACTER_SELECTION);
+            DOVirtual.DelayedCall(0.25f, delegate { gameplayPopupsManager.DisplayPopUp(PopUp.NONE); });
         });
+
+        //gameplayPopupsManager.DisplayPopUp(PopUp.MAP_SELECTION, delegate
+        //{
+        //    gameplayPopupsManager.DisplayPopUp(PopUp.CHARACTER_SELECTION, delegate
+        //    {
+        //        gameManager.GameStarted();
+        //        gameplayPopupsManager.HidePopUp(PopUp.CHARACTER_SELECTION);
+        //        DOVirtual.DelayedCall(0.25f, delegate { gameplayPopupsManager.DisplayPopUp(PopUp.NONE); });
+        //    });
+        //});
     }
 
     private void PauseButtonAction()

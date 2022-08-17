@@ -8,7 +8,6 @@ public class EnemyController : MonoBehaviour
     #region Public Attributes
 
     [Header("-- Enemy Controlling --")]
-    public float enemyMoveSpeed;
     public float bulletMoveSpeed;
     public float bulletMaxDistance;
     public float waitTimeInitial;
@@ -86,43 +85,35 @@ public class EnemyController : MonoBehaviour
         {
             yield return Helper.WaitFor(tempCooldown);
             tempCooldown = Mathf.Clamp(--tempCooldown, minMaxWaitTime.x, minMaxWaitTime.y);
-            StartCoroutine(SetEnemyForMoving());
+            StartCoroutine(SetNewEnemy());
         }
     }
 
-    private IEnumerator SetEnemyForMoving()
+    private IEnumerator SetNewEnemy()
     {
         enemyAnimator.CrossFade("Idle", 0);
         enemy.gameObject.SetActive(true);
         enemy.position = startPos.position;
 
-        float timer = 0;
-        float duration = enemyMoveSpeed / 3;
-        while (timer < duration)
+        while(enemy.position.x > attackPos.position.x)
         {
-            enemy.position = Vector3.Lerp(startPos.position, attackPos.position, timer / duration);
-
-            timer += Time.deltaTime;
+            enemy.position -= new Vector3((envManager.patchMoveSpeed) * Time.deltaTime, 0, 0);
             yield return new WaitForEndOfFrame();
         }
 
         enemyAnimator.CrossFade("Enemy Attack", 0);
         yield return new WaitForSeconds(0.25f);
         AudioController.Instance.PlayAudio(AudioName.BULLET_FIRE);
-        StartCoroutine(MoveBullet());
+        StartCoroutine(FireBullet());
 
-        timer = 0;
-        duration = enemyMoveSpeed - (enemyMoveSpeed / 3);
-        while (timer < duration)
+        while (enemy.position.x > endPos.position.x)
         {
-            enemy.position = Vector3.Lerp(attackPos.position, endPos.position, timer / duration);
-
-            timer += Time.deltaTime;
+            enemy.position -= new Vector3((envManager.patchMoveSpeed) * Time.deltaTime, 0, 0);
             yield return new WaitForEndOfFrame();
         }
     }
 
-    private IEnumerator MoveBullet()
+    private IEnumerator FireBullet()
     {
         bullet.gameObject.SetActive(true);
         bullet.position = bulletInitialPos.position;
