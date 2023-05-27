@@ -31,7 +31,6 @@ public class LaodingScreen : MonoBehaviour
         playButton.onClick.AddListener(delegate 
         { 
             SceneController.Instance.Load(nextScene);
-            AudioController.Instance.PlayAudio(AudioName.UI_SFX);
         });
     }
 

@@ -10,6 +10,8 @@ public class GameEndPopUp : GamePopUp
 {
     #region Public Attributes
 
+    public GameObject Bg;
+
     [Header("Puase PopUp Elements")]
     public ZoomInOutPopUp popUpAnim;
     public TMP_Text scoresText;
@@ -40,12 +42,14 @@ public class GameEndPopUp : GamePopUp
     {
         scoresText.text = gameData.sessionCoins + "";
         popUpAnim.Animate(true);
+        Bg.SetActive(true);
     }
 
     public override void Hide()
     {
         AudioController.Instance.PlayAudio(AudioName.UI_SFX);
         popUpAnim.Animate(false);
+        Bg.SetActive(false);
     }
 
     public override void SetAction(UnityAction _callback)

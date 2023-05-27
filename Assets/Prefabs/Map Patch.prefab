@@ -3682,9 +3682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d751ddf203f1554ea43423bd275a182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerOne: {fileID: 8121659410679399896}
-  layerTwo: {fileID: 8121659411378861774}
-  layerThree: {fileID: 8121659410184039215}
   floorPos: 4.743
   bottomPos: -5
   minMaxX: {x: -9, y: 9}

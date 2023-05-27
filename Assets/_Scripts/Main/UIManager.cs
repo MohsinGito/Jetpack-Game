@@ -100,7 +100,6 @@ public class UIManager : GameState
             return;
         }
 
-        gameData.SelectRandomGameMap();
         gameplayPopupsManager.DisplayPopUp(PopUp.CHARACTER_SELECTION, delegate
         {
             gameManager.GameStarted();

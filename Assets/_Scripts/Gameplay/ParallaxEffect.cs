@@ -1,73 +1,68 @@
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ParallaxEffect : MonoBehaviour
 {
+    public float differenceFactor = 1;
+    public List<GameObject> parrallaxTransforms;
 
-    #region Public Attributes
-
-    public float endPos;
-    public float speedIncrement;
-    public List<Transform> parallexTransforms;
-
-    #endregion
-
-    #region Private Attributes
-
-    private bool isInitialized;
-    private Transform cachedPatch;
+    private bool isInit;
     private EnvironmentManager envManager;
-    private List<Vector3> cachedPositions;
+    private List<Vector3> initialPositions;
 
-    #endregion
-
-    #region Main Methods
-
-    public void Init(Sprite _displaySprite, EnvironmentManager _envManager)
+    public void Init(Sprite _displaySp, EnvironmentManager _envManager)
     {
-        isInitialized = true;
         envManager = _envManager;
-        cachedPositions = parallexTransforms.Select(n => n.position).ToList();
+        initialPositions = new List<Vector3>();
 
-        foreach (Transform parallexTransform in parallexTransforms)
-            parallexTransform.GetComponent<SpriteRenderer>().sprite = _displaySprite;
+        for (int i = 0; i < parrallaxTransforms.Count; i++)
+        {
+            Vector3 initialPosition;
+            if (i == 0)
+            {
+                initialPosition = Vector3.zero;
+            }
+            else
+            {
+                initialPosition = parrallaxTransforms[i - 1].transform.position + new Vector3(envManager.patchDistance, 0, 0);
+            }
+            parrallaxTransforms[i].transform.position = initialPosition;
+            initialPositions.Add(initialPosition);
+            parrallaxTransforms[i].GetComponent<SpriteRenderer>().sprite = _displaySp;
+        }
+
+        isInit = true;
     }
 
-    private void Update()
+    void Update()
     {
-        if (!isInitialized)
+        if (!isInit)
             return;
 
-        if (parallexTransforms[0].position.x <= endPos)
+        for (int i = 0; i < parrallaxTransforms.Count; i++)
         {
-            // -- CIRCULATING THE LIST SO THE NEXT PATCH WILL COME TO ZERO INDEX
-            cachedPatch = parallexTransforms[0];
-            for (int i = 0; i < parallexTransforms.Count; i++)
-            {
-                if (i == parallexTransforms.Count - 1)
-                    parallexTransforms[i] = cachedPatch;
-                else
-                    parallexTransforms[i] = parallexTransforms[i + 1];
-            }
+            float moveAmount = envManager.patchMoveSpeed * Time.deltaTime * differenceFactor;
+            parrallaxTransforms[i].transform.position -= new Vector3(moveAmount, 0, 0);
 
-            // -- AFTER CIRCULATING, ASSIGNING ORIGINAL POSITIONS SO THAT ENVIRONMENT PATCHES KEEP LOOPING
-            for (int i = 0; i < parallexTransforms.Count; i++)
+            if (parrallaxTransforms[i].transform.position.x <= envManager.deadEndPosition)
             {
-                parallexTransforms[i].position = cachedPositions[i];
-            }
-        }
-        else
-        {
-            foreach (Transform pt in parallexTransforms)
-            {
-                pt.position -= new Vector3((envManager.patchMoveSpeed + (envManager.patchMoveSpeed * speedIncrement)) * Time.deltaTime, 0, 0);
+                float rightmostX = GetRightmostX() + envManager.patchDistance;
+                parrallaxTransforms[i].transform.position = new Vector3(rightmostX, parrallaxTransforms[i].transform.position.y, parrallaxTransforms[i].transform.position.z);
             }
         }
     }
 
+    float GetRightmostX()
+    {
+        float rightmostX = parrallaxTransforms[0].transform.position.x;
+        for (int i = 1; i < parrallaxTransforms.Count; i++)
+        {
+            if (parrallaxTransforms[i].transform.position.x > rightmostX)
+            {
+                rightmostX = parrallaxTransforms[i].transform.position.x;
+            }
+        }
 
-    #endregion
-
-
+        return rightmostX;
+    }
 }

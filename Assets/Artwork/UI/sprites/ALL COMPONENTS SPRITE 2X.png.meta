@@ -1,0 +1,2710 @@
+fileFormatVersion: 2
+guid: f195be51c6f7f437fa75e2dabba390fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2242508275802871546
+    second: ALL COMPONENTS SPRITE 2X_0
+  - first:
+      213: -5313782109643651960
+    second: ALL COMPONENTS SPRITE 2X_1
+  - first:
+      213: 2377744620409031379
+    second: ALL COMPONENTS SPRITE 2X_2
+  - first:
+      213: 7197500483500081069
+    second: ALL COMPONENTS SPRITE 2X_3
+  - first:
+      213: -4832652605662062994
+    second: ALL COMPONENTS SPRITE 2X_4
+  - first:
+      213: 5950755223808092930
+    second: ALL COMPONENTS SPRITE 2X_5
+  - first:
+      213: -4814316456466004860
+    second: ALL COMPONENTS SPRITE 2X_6
+  - first:
+      213: 7525251348461125762
+    second: ALL COMPONENTS SPRITE 2X_8
+  - first:
+      213: 419137309899373123
+    second: ALL COMPONENTS SPRITE 2X_11
+  - first:
+      213: -7401864395100184363
+    second: ALL COMPONENTS SPRITE 2X_12
+  - first:
+      213: -775998481632421362
+    second: ALL COMPONENTS SPRITE 2X_13
+  - first:
+      213: 4854737226831772867
+    second: ALL COMPONENTS SPRITE 2X_14
+  - first:
+      213: -8672740271028256619
+    second: ALL COMPONENTS SPRITE 2X_15
+  - first:
+      213: 4004233502544158636
+    second: ALL COMPONENTS SPRITE 2X_16
+  - first:
+      213: 8368027709924511982
+    second: ALL COMPONENTS SPRITE 2X_17
+  - first:
+      213: 7975285243418897905
+    second: ALL COMPONENTS SPRITE 2X_18
+  - first:
+      213: 5132736762773897059
+    second: ALL COMPONENTS SPRITE 2X_19
+  - first:
+      213: -4290536853598180883
+    second: ALL COMPONENTS SPRITE 2X_20
+  - first:
+      213: 11741853197266836
+    second: ALL COMPONENTS SPRITE 2X_21
+  - first:
+      213: -4612954896284399547
+    second: ALL COMPONENTS SPRITE 2X_22
+  - first:
+      213: 6478146048569494927
+    second: ALL COMPONENTS SPRITE 2X_23
+  - first:
+      213: -7059033433121872775
+    second: ALL COMPONENTS SPRITE 2X_24
+  - first:
+      213: -6978383474678037181
+    second: ALL COMPONENTS SPRITE 2X_25
+  - first:
+      213: -152344430457587744
+    second: ALL COMPONENTS SPRITE 2X_26
+  - first:
+      213: 8320142623225947078
+    second: ALL COMPONENTS SPRITE 2X_27
+  - first:
+      213: 4375669747371800347
+    second: ALL COMPONENTS SPRITE 2X_28
+  - first:
+      213: 3149695279880174746
+    second: ALL COMPONENTS SPRITE 2X_29
+  - first:
+      213: 8367805828449471463
+    second: ALL COMPONENTS SPRITE 2X_30
+  - first:
+      213: 2898090102966272263
+    second: ALL COMPONENTS SPRITE 2X_31
+  - first:
+      213: 6799914942593067595
+    second: ALL COMPONENTS SPRITE 2X_32
+  - first:
+      213: 7637042510943988616
+    second: ALL COMPONENTS SPRITE 2X_33
+  - first:
+      213: -346410861862297422
+    second: ALL COMPONENTS SPRITE 2X_34
+  - first:
+      213: -4591836687547797679
+    second: ALL COMPONENTS SPRITE 2X_35
+  - first:
+      213: 2063927352260247855
+    second: ALL COMPONENTS SPRITE 2X_36
+  - first:
+      213: 1188611795276807621
+    second: ALL COMPONENTS SPRITE 2X_37
+  - first:
+      213: -2312825124602805933
+    second: ALL COMPONENTS SPRITE 2X_38
+  - first:
+      213: -5335640632199304764
+    second: ALL COMPONENTS SPRITE 2X_39
+  - first:
+      213: -5974064243313080724
+    second: ALL COMPONENTS SPRITE 2X_40
+  - first:
+      213: -817948291002092339
+    second: ALL COMPONENTS SPRITE 2X_41
+  - first:
+      213: -1309969508990413368
+    second: ALL COMPONENTS SPRITE 2X_42
+  - first:
+      213: -929931048222246736
+    second: ALL COMPONENTS SPRITE 2X_43
+  - first:
+      213: 1817006978710910792
+    second: ALL COMPONENTS SPRITE 2X_44
+  - first:
+      213: -2422778629427595752
+    second: ALL COMPONENTS SPRITE 2X_45
+  - first:
+      213: 3571419624641000065
+    second: ALL COMPONENTS SPRITE 2X_46
+  - first:
+      213: -1087723625403211169
+    second: ALL COMPONENTS SPRITE 2X_47
+  - first:
+      213: 798654883142360371
+    second: ALL COMPONENTS SPRITE 2X_48
+  - first:
+      213: 1524241358157987187
+    second: ALL COMPONENTS SPRITE 2X_49
+  - first:
+      213: 5475302929280701128
+    second: ALL COMPONENTS SPRITE 2X_50
+  - first:
+      213: 1326874138087651268
+    second: ALL COMPONENTS SPRITE 2X_51
+  - first:
+      213: -8160246824014816498
+    second: ALL COMPONENTS SPRITE 2X_52
+  - first:
+      213: 6389545864178332422
+    second: ALL COMPONENTS SPRITE 2X_53
+  - first:
+      213: 5809920006867899188
+    second: ALL COMPONENTS SPRITE 2X_54
+  - first:
+      213: 4158555283242387837
+    second: ALL COMPONENTS SPRITE 2X_55
+  - first:
+      213: 7780866682099140822
+    second: ALL COMPONENTS SPRITE 2X_56
+  - first:
+      213: 7777260724800240024
+    second: ALL COMPONENTS SPRITE 2X_57
+  - first:
+      213: -3597047459857577160
+    second: ALL COMPONENTS SPRITE 2X_58
+  - first:
+      213: 5693165471566613513
+    second: ALL COMPONENTS SPRITE 2X_59
+  - first:
+      213: 1823172655751285282
+    second: ALL COMPONENTS SPRITE 2X_60
+  - first:
+      213: -3710172905128661658
+    second: ALL COMPONENTS SPRITE 2X_61
+  - first:
+      213: 7412816343279842575
+    second: ALL COMPONENTS SPRITE 2X_62
+  - first:
+      213: -6249461669153416916
+    second: ALL COMPONENTS SPRITE 2X_63
+  - first:
+      213: 8330964883828980320
+    second: ALL COMPONENTS SPRITE 2X_64
+  - first:
+      213: 1588118958721762186
+    second: ALL COMPONENTS SPRITE 2X_65
+  - first:
+      213: -3855818548646097915
+    second: ALL COMPONENTS SPRITE 2X_66
+  - first:
+      213: 5379962651010670257
+    second: ALL COMPONENTS SPRITE 2X_67
+  - first:
+      213: 3573888262541679698
+    second: ALL COMPONENTS SPRITE 2X_68
+  - first:
+      213: -222099635569370554
+    second: ALL COMPONENTS SPRITE 2X_69
+  - first:
+      213: 5329769712922500716
+    second: ALL COMPONENTS SPRITE 2X_70
+  - first:
+      213: -3452436944559810342
+    second: ALL COMPONENTS SPRITE 2X_71
+  - first:
+      213: 3834138606209824074
+    second: ALL COMPONENTS SPRITE 2X_72
+  - first:
+      213: 3365085767255080082
+    second: ALL COMPONENTS SPRITE 2X_73
+  - first:
+      213: 418656693899459852
+    second: ALL COMPONENTS SPRITE 2X_74
+  - first:
+      213: -4698236720117977947
+    second: ALL COMPONENTS SPRITE 2X_75
+  - first:
+      213: 8757781150649745690
+    second: ALL COMPONENTS SPRITE 2X_76
+  - first:
+      213: 48729027565357647
+    second: ALL COMPONENTS SPRITE 2X_77
+  - first:
+      213: 4776985781818178006
+    second: ALL COMPONENTS SPRITE 2X_78
+  - first:
+      213: 1790914309224072610
+    second: ALL COMPONENTS SPRITE 2X_79
+  - first:
+      213: 1348396919099030725
+    second: ALL COMPONENTS SPRITE 2X_80
+  - first:
+      213: -4694464752546092737
+    second: ALL COMPONENTS SPRITE 2X_81
+  - first:
+      213: -4922457720367978218
+    second: ALL COMPONENTS SPRITE 2X_82
+  - first:
+      213: -4519478166894222034
+    second: ALL COMPONENTS SPRITE 2X_83
+  - first:
+      213: 1597003660836022617
+    second: ALL COMPONENTS SPRITE 2X_84
+  - first:
+      213: 2711407870067257459
+    second: ALL COMPONENTS SPRITE 2X_85
+  - first:
+      213: -6383853790898609372
+    second: ALL COMPONENTS SPRITE 2X_86
+  - first:
+      213: 1720104427660195692
+    second: ALL COMPONENTS SPRITE 2X_87
+  - first:
+      213: -3583809380321742980
+    second: ALL COMPONENTS SPRITE 2X_88
+  - first:
+      213: -5863944153448560929
+    second: ALL COMPONENTS SPRITE 2X_89
+  - first:
+      213: -3328447821164791191
+    second: ALL COMPONENTS SPRITE 2X_90
+  - first:
+      213: 7486767718083394030
+    second: ALL COMPONENTS SPRITE 2X_91
+  - first:
+      213: 4315448634441789990
+    second: ALL COMPONENTS SPRITE 2X_92
+  - first:
+      213: -1741235362631060693
+    second: ALL COMPONENTS SPRITE 2X_93
+  - first:
+      213: 8277076359492077432
+    second: ALL COMPONENTS SPRITE 2X_94
+  - first:
+      213: 6128656095229717297
+    second: ALL COMPONENTS SPRITE 2X_95
+  - first:
+      213: 1027982700278883757
+    second: ALL COMPONENTS SPRITE 2X_96
+  - first:
+      213: -1191125480211499503
+    second: ALL COMPONENTS SPRITE 2X_97
+  - first:
+      213: 581258358725294667
+    second: ALL COMPONENTS SPRITE 2X_98
+  - first:
+      213: -7376273721857996927
+    second: ALL COMPONENTS SPRITE 2X_99
+  - first:
+      213: -5101096247657527289
+    second: ALL COMPONENTS SPRITE 2X_100
+  - first:
+      213: -8701220547378227359
+    second: ALL COMPONENTS SPRITE 2X_101
+  - first:
+      213: 2392743908577921067
+    second: ALL COMPONENTS SPRITE 2X_102
+  - first:
+      213: 6319016001592727112
+    second: ALL COMPONENTS SPRITE 2X_103
+  - first:
+      213: -3185285084051452311
+    second: ALL COMPONENTS SPRITE 2X_104
+  - first:
+      213: 8579970235746266563
+    second: ALL COMPONENTS SPRITE 2X_105
+  - first:
+      213: -4685567140350488690
+    second: ALL COMPONENTS SPRITE 2X_106
+  - first:
+      213: -1684384818342479425
+    second: ALL COMPONENTS SPRITE 2X_107
+  - first:
+      213: 6629298112464087181
+    second: ALL COMPONENTS SPRITE 2X_108
+  - first:
+      213: 923023971853875233
+    second: ALL COMPONENTS SPRITE 2X_109
+  - first:
+      213: 4181070332031799642
+    second: ALL COMPONENTS SPRITE 2X_110
+  - first:
+      213: 7863329278886541023
+    second: ALL COMPONENTS SPRITE 2X_111
+  - first:
+      213: -2357052455076418042
+    second: ALL COMPONENTS SPRITE 2X_112
+  - first:
+      213: 2019132481318806043
+    second: ALL COMPONENTS SPRITE 2X_113
+  - first:
+      213: 8820382215717596782
+    second: ALL COMPONENTS SPRITE 2X_114
+  - first:
+      213: 1703362394364960003
+    second: ALL COMPONENTS SPRITE 2X_115
+  - first:
+      213: 5526694798521678278
+    second: ALL COMPONENTS SPRITE 2X_116
+  - first:
+      213: -1366208993576033020
+    second: ALL COMPONENTS SPRITE 2X_117
+  - first:
+      213: -1575343635928236146
+    second: ALL COMPONENTS SPRITE 2X_118
+  - first:
+      213: 8928505737759307332
+    second: ALL COMPONENTS SPRITE 2X_119
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6504
+        width: 2322
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af69a11456dfe1f10800000000000000
+      internalID: 2242508275802871546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_1
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 5574
+        width: 748
+        height: 1025
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8844ddc2357a146b0800000000000000
+      internalID: -5313782109643651960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_2
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 5574
+        width: 732
+        height: 1025
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da831a62227ff020800000000000000
+      internalID: 2377744620409031379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_3
+      rect:
+        serializedVersion: 2
+        x: 4004
+        y: 5588
+        width: 635
+        height: 1012
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf79b54e88a2e360800000000000000
+      internalID: 7197500483500081069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_4
+      rect:
+        serializedVersion: 2
+        x: 4685
+        y: 5621
+        width: 1876
+        height: 979
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6695a44f08feecb0800000000000000
+      internalID: -4832652605662062994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_5
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 5620
+        width: 1308
+        height: 980
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ba16cf854559250800000000000000
+      internalID: 5950755223808092930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6456
+        width: 249
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484c600b0bc103db0800000000000000
+      internalID: -4814316456466004860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 5359
+        width: 1684
+        height: 1061
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2800e8e1b301f6860800000000000000
+      internalID: 7525251348461125762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_11
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 5236
+        width: 919
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a3aa4a92311d500800000000000000
+      internalID: 419137309899373123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_12
+      rect:
+        serializedVersion: 2
+        x: 4685
+        y: 3747
+        width: 3235
+        height: 1813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d02176ac8b474990800000000000000
+      internalID: -7401864395100184363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_13
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 5252
+        width: 771
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a9e0c0e791b35f0800000000000000
+      internalID: -775998481632421362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_14
+      rect:
+        serializedVersion: 2
+        x: 2998
+        y: 5225
+        width: 665
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc3c2b49cd7f5340800000000000000
+      internalID: 4854737226831772867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3959
+        width: 1747
+        height: 1278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590c2247cac34a780800000000000000
+      internalID: -8672740271028256619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_16
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 4613
+        width: 1009
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafdcdcb725e19730800000000000000
+      internalID: 4004233502544158636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_17
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 4048
+        width: 1623
+        height: 1047
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee01da0ddd4312470800000000000000
+      internalID: 8368027709924511982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_18
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 4056
+        width: 1037
+        height: 495
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fde56c8ca7edae60800000000000000
+      internalID: 7975285243418897905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_23
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 3628
+        width: 241
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dc51c228ff6e950800000000000000
+      internalID: 6478146048569494927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_24
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 3598
+        width: 285
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9742a213e76490e90800000000000000
+      internalID: -7059033433121872775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_25
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 3088
+        width: 948
+        height: 850
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3450c5de33dc72f90800000000000000
+      internalID: -6978383474678037181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_26
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 3604
+        width: 1657
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7f0133c83c2edf0800000000000000
+      internalID: -152344430457587744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_27
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 3677
+        width: 253
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c328f142a5177370800000000000000
+      internalID: 8320142623225947078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_28
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 3108
+        width: 824
+        height: 667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17f482b37089bc30800000000000000
+      internalID: 4375669747371800347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_33
+      rect:
+        serializedVersion: 2
+        x: 4685
+        y: 1873
+        width: 3235
+        height: 1813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88baf5f63b93cf960800000000000000
+      internalID: 7637042510943988616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_34
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 3406
+        width: 466
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b06c50182d413bf0800000000000000
+      internalID: -346410861862297422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_35
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 3183
+        width: 1657
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f6b1c7cd48640c0800000000000000
+      internalID: -4591836687547797679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_36
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2635
+        width: 811
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f214fa1edfa84ac10800000000000000
+      internalID: 2063927352260247855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_37
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1709
+        width: 1639
+        height: 1256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd3059512cce7010800000000000000
+      internalID: 1188611795276807621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_38
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 2763
+        width: 1657
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35183749dc137efd0800000000000000
+      internalID: -2312825124602805933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_39
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2232
+        width: 811
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9ae9c4d1ff3f5b0800000000000000
+      internalID: -5335640632199304764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_40
+      rect:
+        serializedVersion: 2
+        x: 2769
+        y: 2309
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6606fff83cd71da0800000000000000
+      internalID: -5974064243313080724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_41
+      rect:
+        serializedVersion: 2
+        x: 2793
+        y: 2311
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4be2eec5016a4f0800000000000000
+      internalID: -817948291002092339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_42
+      rect:
+        serializedVersion: 2
+        x: 2930
+        y: 2277
+        width: 254
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5980e0cad02dde0800000000000000
+      internalID: -1309969508990413368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_43
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 2277
+        width: 265
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b83b1d73a83813f0800000000000000
+      internalID: -929931048222246736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_44
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 2287
+        width: 250
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8473870683e473910800000000000000
+      internalID: 1817006978710910792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_45
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 2288
+        width: 250
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8167f874caf806ed0800000000000000
+      internalID: -2422778629427595752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_46
+      rect:
+        serializedVersion: 2
+        x: 4369
+        y: 2288
+        width: 251
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182f596f93b309130800000000000000
+      internalID: 3571419624641000065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_47
+      rect:
+        serializedVersion: 2
+        x: 2811
+        y: 2215
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52aa0e2021a7e0f0800000000000000
+      internalID: -1087723625403211169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_48
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 2189
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dd4df7264651b00800000000000000
+      internalID: 798654883142360371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_49
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 1858
+        width: 260
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d37f08071372510800000000000000
+      internalID: 1524241358157987187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_50
+      rect:
+        serializedVersion: 2
+        x: 3292
+        y: 1835
+        width: 259
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c29e69310f2cfb40800000000000000
+      internalID: 5475302929280701128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_51
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 1839
+        width: 261
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7fd5e9ff00a6210800000000000000
+      internalID: 1326874138087651268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_52
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 2162
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b56179fbaf0ce80800000000000000
+      internalID: -8160246824014816498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_53
+      rect:
+        serializedVersion: 2
+        x: 3652
+        y: 1841
+        width: 262
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6037a663c1a3ca850800000000000000
+      internalID: 6389545864178332422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_54
+      rect:
+        serializedVersion: 2
+        x: 4325
+        y: 1831
+        width: 288
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433dbc6c67bf0a050800000000000000
+      internalID: 5809920006867899188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1967
+        width: 898
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d798c744ff726b930800000000000000
+      internalID: 4158555283242387837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_56
+      rect:
+        serializedVersion: 2
+        x: 2828
+        y: 2118
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d80137c5013bfb60800000000000000
+      internalID: 7780866682099140822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_57
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1571
+        width: 998
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899b05b6c616eeb60800000000000000
+      internalID: 7777260724800240024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_58
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 1229
+        width: 555
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bc7faa468b41ec0800000000000000
+      internalID: -3597047459857577160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_59
+      rect:
+        serializedVersion: 2
+        x: 4685
+        y: 0
+        width: 3235
+        height: 1813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c4f3c25df220f40800000000000000
+      internalID: 5693165471566613513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_60
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1285
+        width: 1357
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ac24eeed53d4910800000000000000
+      internalID: 1823172655751285282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1136
+        width: 1345
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a838cab57c12a0610800000000000000
+      internalID: 1588118958721762186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_66
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 973
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c469185716d7ac0800000000000000
+      internalID: -3855818548646097915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_67
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 973
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be1c5ed68779aa40800000000000000
+      internalID: 5379962651010670257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_68
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 979
+        width: 208
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c1cb38070099130800000000000000
+      internalID: 3573888262541679698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_69
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 973
+        width: 220
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ad425ee81faecf0800000000000000
+      internalID: -222099635569370554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_70
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 973
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e9169c05527f940800000000000000
+      internalID: 5329769712922500716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_71
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 973
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8d31604ea7610d0800000000000000
+      internalID: -3452436944559810342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_72
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 998
+        width: 204
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a457fba8fb8953530800000000000000
+      internalID: 3834138606209824074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_73
+      rect:
+        serializedVersion: 2
+        x: 3446
+        y: 980
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c36f32daf23be20800000000000000
+      internalID: 3365085767255080082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_74
+      rect:
+        serializedVersion: 2
+        x: 3757
+        y: 1037
+        width: 174
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d77b28b0e5fc500800000000000000
+      internalID: 418656693899459852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_75
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 679
+        width: 405
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acebaa68928cceb0800000000000000
+      internalID: -4698236720117977947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_76
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1026
+        width: 1328
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1107194e83e98970800000000000000
+      internalID: 8757781150649745690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 824
+        width: 1345
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a884adace1da000800000000000000
+      internalID: 48729027565357647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_78
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 650
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d93d5e42434b4240800000000000000
+      internalID: 4776985781818178006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_79
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 650
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a50778531b9ad810800000000000000
+      internalID: 1790914309224072610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_80
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 650
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccf0239ad776b210800000000000000
+      internalID: 1348396919099030725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_81
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 650
+        width: 220
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39e5ed0e29e9deb0800000000000000
+      internalID: -4694464752546092737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_82
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 650
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619669b98caefabb0800000000000000
+      internalID: -4922457720367978218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_83
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 646
+        width: 219
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25e22c6d869741c0800000000000000
+      internalID: -4519478166894222034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_84
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 674
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95921254e52b92610800000000000000
+      internalID: 1597003660836022617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_85
+      rect:
+        serializedVersion: 2
+        x: 3443
+        y: 656
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370be88971bd0a520800000000000000
+      internalID: 2711407870067257459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_86
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 868
+        width: 175
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423257fdccef767a0800000000000000
+      internalID: -6383853790898609372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_87
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 661
+        width: 1322
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67334b0dd90fd710800000000000000
+      internalID: 1720104427660195692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_88
+      rect:
+        serializedVersion: 2
+        x: 3764
+        y: 694
+        width: 129
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fa53f3b50c34ec0800000000000000
+      internalID: -3583809380321742980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_89
+      rect:
+        serializedVersion: 2
+        x: 3950
+        y: 694
+        width: 129
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd648f66cd51f9ea0800000000000000
+      internalID: -5863944153448560929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484
+        width: 1345
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96abc0e675afec1d0800000000000000
+      internalID: -3328447821164791191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_91
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 326
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9f830b29756e760800000000000000
+      internalID: 7486767718083394030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_92
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 326
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622f8563bad83eb30800000000000000
+      internalID: 4315448634441789990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_93
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 326
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23f604c9a3e5d7e0800000000000000
+      internalID: -1741235362631060693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_94
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 326
+        width: 220
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8770f4a58151ed270800000000000000
+      internalID: 8277076359492077432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_95
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 326
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b23b26f3c5d0550800000000000000
+      internalID: 6128656095229717297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_96
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 323
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5ae55c1d0244e00800000000000000
+      internalID: 1027982700278883757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_97
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 351
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116b315cfa5487fe0800000000000000
+      internalID: -1191125480211499503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_98
+      rect:
+        serializedVersion: 2
+        x: 3443
+        y: 333
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a3c8ac56b011800800000000000000
+      internalID: 581258358725294667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_99
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 325
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1870b92912632a990800000000000000
+      internalID: -7376273721857996927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_100
+      rect:
+        serializedVersion: 2
+        x: 4039
+        y: 325
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7088b415df34539b0800000000000000
+      internalID: -5101096247657527289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_101
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 345
+        width: 1324
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167d031630e0f3780800000000000000
+      internalID: -8701220547378227359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 1345
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28444558ebb43120800000000000000
+      internalID: 2392743908577921067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_103
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 9
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84691f8e297a1b750800000000000000
+      internalID: 6319016001592727112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_104
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 9
+        width: 208
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e43c8a7189bc3d0800000000000000
+      internalID: -3185285084051452311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_105
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 3
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cda415887d221770800000000000000
+      internalID: 8579970235746266563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_106
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 3
+        width: 220
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f8a24d28589feb0800000000000000
+      internalID: -4685567140350488690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_110
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 0
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a511ea19055260a30800000000000000
+      internalID: 4181070332031799642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_111
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 28
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6f5f34158202d60800000000000000
+      internalID: 7863329278886541023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_112
+      rect:
+        serializedVersion: 2
+        x: 3443
+        y: 10
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e2532c7411a4fd0800000000000000
+      internalID: -2357052455076418042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_113
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 6
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12e57f3b46650c10800000000000000
+      internalID: 2019132481318806043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_114
+      rect:
+        serializedVersion: 2
+        x: 4039
+        y: 6
+        width: 219
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e250f84ea486a70800000000000000
+      internalID: 8820382215717596782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_115
+      rect:
+        serializedVersion: 2
+        x: 4345
+        y: 0
+        width: 220
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30dd1e7a21f83a710800000000000000
+      internalID: 1703362394364960003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_116
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1320
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c932e733a3c2bc40800000000000000
+      internalID: 5526694798521678278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL COMPONENTS SPRITE 2X_117
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 0
+        width: 222
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405e4f8a8204a0de0800000000000000
+      internalID: -1366208993576033020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ALL COMPONENTS SPRITE 2X_0: 2242508275802871546
+      ALL COMPONENTS SPRITE 2X_1: -5313782109643651960
+      ALL COMPONENTS SPRITE 2X_100: -5101096247657527289
+      ALL COMPONENTS SPRITE 2X_101: -8701220547378227359
+      ALL COMPONENTS SPRITE 2X_102: 2392743908577921067
+      ALL COMPONENTS SPRITE 2X_103: 6319016001592727112
+      ALL COMPONENTS SPRITE 2X_104: -3185285084051452311
+      ALL COMPONENTS SPRITE 2X_105: 8579970235746266563
+      ALL COMPONENTS SPRITE 2X_106: -4685567140350488690
+      ALL COMPONENTS SPRITE 2X_11: 419137309899373123
+      ALL COMPONENTS SPRITE 2X_110: 4181070332031799642
+      ALL COMPONENTS SPRITE 2X_111: 7863329278886541023
+      ALL COMPONENTS SPRITE 2X_112: -2357052455076418042
+      ALL COMPONENTS SPRITE 2X_113: 2019132481318806043
+      ALL COMPONENTS SPRITE 2X_114: 8820382215717596782
+      ALL COMPONENTS SPRITE 2X_115: 1703362394364960003
+      ALL COMPONENTS SPRITE 2X_116: 5526694798521678278
+      ALL COMPONENTS SPRITE 2X_117: -1366208993576033020
+      ALL COMPONENTS SPRITE 2X_12: -7401864395100184363
+      ALL COMPONENTS SPRITE 2X_13: -775998481632421362
+      ALL COMPONENTS SPRITE 2X_14: 4854737226831772867
+      ALL COMPONENTS SPRITE 2X_15: -8672740271028256619
+      ALL COMPONENTS SPRITE 2X_16: 4004233502544158636
+      ALL COMPONENTS SPRITE 2X_17: 8368027709924511982
+      ALL COMPONENTS SPRITE 2X_18: 7975285243418897905
+      ALL COMPONENTS SPRITE 2X_2: 2377744620409031379
+      ALL COMPONENTS SPRITE 2X_23: 6478146048569494927
+      ALL COMPONENTS SPRITE 2X_24: -7059033433121872775
+      ALL COMPONENTS SPRITE 2X_25: -6978383474678037181
+      ALL COMPONENTS SPRITE 2X_26: -152344430457587744
+      ALL COMPONENTS SPRITE 2X_27: 8320142623225947078
+      ALL COMPONENTS SPRITE 2X_28: 4375669747371800347
+      ALL COMPONENTS SPRITE 2X_3: 7197500483500081069
+      ALL COMPONENTS SPRITE 2X_33: 7637042510943988616
+      ALL COMPONENTS SPRITE 2X_34: -346410861862297422
+      ALL COMPONENTS SPRITE 2X_35: -4591836687547797679
+      ALL COMPONENTS SPRITE 2X_36: 2063927352260247855
+      ALL COMPONENTS SPRITE 2X_37: 1188611795276807621
+      ALL COMPONENTS SPRITE 2X_38: -2312825124602805933
+      ALL COMPONENTS SPRITE 2X_39: -5335640632199304764
+      ALL COMPONENTS SPRITE 2X_4: -4832652605662062994
+      ALL COMPONENTS SPRITE 2X_40: -5974064243313080724
+      ALL COMPONENTS SPRITE 2X_41: -817948291002092339
+      ALL COMPONENTS SPRITE 2X_42: -1309969508990413368
+      ALL COMPONENTS SPRITE 2X_43: -929931048222246736
+      ALL COMPONENTS SPRITE 2X_44: 1817006978710910792
+      ALL COMPONENTS SPRITE 2X_45: -2422778629427595752
+      ALL COMPONENTS SPRITE 2X_46: 3571419624641000065
+      ALL COMPONENTS SPRITE 2X_47: -1087723625403211169
+      ALL COMPONENTS SPRITE 2X_48: 798654883142360371
+      ALL COMPONENTS SPRITE 2X_49: 1524241358157987187
+      ALL COMPONENTS SPRITE 2X_5: 5950755223808092930
+      ALL COMPONENTS SPRITE 2X_50: 5475302929280701128
+      ALL COMPONENTS SPRITE 2X_51: 1326874138087651268
+      ALL COMPONENTS SPRITE 2X_52: -8160246824014816498
+      ALL COMPONENTS SPRITE 2X_53: 6389545864178332422
+      ALL COMPONENTS SPRITE 2X_54: 5809920006867899188
+      ALL COMPONENTS SPRITE 2X_55: 4158555283242387837
+      ALL COMPONENTS SPRITE 2X_56: 7780866682099140822
+      ALL COMPONENTS SPRITE 2X_57: 7777260724800240024
+      ALL COMPONENTS SPRITE 2X_58: -3597047459857577160
+      ALL COMPONENTS SPRITE 2X_59: 5693165471566613513
+      ALL COMPONENTS SPRITE 2X_6: -4814316456466004860
+      ALL COMPONENTS SPRITE 2X_60: 1823172655751285282
+      ALL COMPONENTS SPRITE 2X_65: 1588118958721762186
+      ALL COMPONENTS SPRITE 2X_66: -3855818548646097915
+      ALL COMPONENTS SPRITE 2X_67: 5379962651010670257
+      ALL COMPONENTS SPRITE 2X_68: 3573888262541679698
+      ALL COMPONENTS SPRITE 2X_69: -222099635569370554
+      ALL COMPONENTS SPRITE 2X_70: 5329769712922500716
+      ALL COMPONENTS SPRITE 2X_71: -3452436944559810342
+      ALL COMPONENTS SPRITE 2X_72: 3834138606209824074
+      ALL COMPONENTS SPRITE 2X_73: 3365085767255080082
+      ALL COMPONENTS SPRITE 2X_74: 418656693899459852
+      ALL COMPONENTS SPRITE 2X_75: -4698236720117977947
+      ALL COMPONENTS SPRITE 2X_76: 8757781150649745690
+      ALL COMPONENTS SPRITE 2X_77: 48729027565357647
+      ALL COMPONENTS SPRITE 2X_78: 4776985781818178006
+      ALL COMPONENTS SPRITE 2X_79: 1790914309224072610
+      ALL COMPONENTS SPRITE 2X_8: 7525251348461125762
+      ALL COMPONENTS SPRITE 2X_80: 1348396919099030725
+      ALL COMPONENTS SPRITE 2X_81: -4694464752546092737
+      ALL COMPONENTS SPRITE 2X_82: -4922457720367978218
+      ALL COMPONENTS SPRITE 2X_83: -4519478166894222034
+      ALL COMPONENTS SPRITE 2X_84: 1597003660836022617
+      ALL COMPONENTS SPRITE 2X_85: 2711407870067257459
+      ALL COMPONENTS SPRITE 2X_86: -6383853790898609372
+      ALL COMPONENTS SPRITE 2X_87: 1720104427660195692
+      ALL COMPONENTS SPRITE 2X_88: -3583809380321742980
+      ALL COMPONENTS SPRITE 2X_89: -5863944153448560929
+      ALL COMPONENTS SPRITE 2X_90: -3328447821164791191
+      ALL COMPONENTS SPRITE 2X_91: 7486767718083394030
+      ALL COMPONENTS SPRITE 2X_92: 4315448634441789990
+      ALL COMPONENTS SPRITE 2X_93: -1741235362631060693
+      ALL COMPONENTS SPRITE 2X_94: 8277076359492077432
+      ALL COMPONENTS SPRITE 2X_95: 6128656095229717297
+      ALL COMPONENTS SPRITE 2X_96: 1027982700278883757
+      ALL COMPONENTS SPRITE 2X_97: -1191125480211499503
+      ALL COMPONENTS SPRITE 2X_98: 581258358725294667
+      ALL COMPONENTS SPRITE 2X_99: -7376273721857996927
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2cb512b60b0ef45deb25c95a11cb493b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Tropical Jungle
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a9ec9e250d136459d9e4296a632636be, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

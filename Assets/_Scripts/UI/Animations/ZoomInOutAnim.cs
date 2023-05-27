@@ -6,6 +6,7 @@ public class ZoomInOutAnim : MonoBehaviour
 {
     public float zoomFactor;
     public float speed;
+    public float interval = 2f;
     public bool isGameObject;
 
     private RectTransform m_Rect;
@@ -40,16 +41,16 @@ public class ZoomInOutAnim : MonoBehaviour
     private void ZoomIn()
     {
         if (isGameObject)
-            transform.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(ZoomOut);
+            transform.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(() => DOVirtual.DelayedCall(interval, ZoomOut));
         else
-            m_Rect.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(ZoomOut);
+            m_Rect.DOScale(originalScale + (Vector3.one * zoomFactor), speed).OnComplete(() => DOVirtual.DelayedCall(interval, ZoomOut));
     }
 
     private void ZoomOut()
     {
         if (isGameObject)
-            transform.DOScale(originalScale, speed).OnComplete(ZoomIn);
+            transform.DOScale(originalScale, speed).OnComplete(() => DOVirtual.DelayedCall(interval, ZoomIn));
         else
-            m_Rect.DOScale(originalScale, speed).OnComplete(ZoomIn);
+            m_Rect.DOScale(originalScale, speed).OnComplete(() => DOVirtual.DelayedCall(interval, ZoomIn));
     }
 }

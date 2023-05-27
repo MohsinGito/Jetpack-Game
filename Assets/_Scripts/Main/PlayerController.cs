@@ -12,7 +12,7 @@ public class PlayerController : GameState
     public float gravityUp;
     public float gravityDown;
     public Vector2 minMaxY;
-    public GameObject playerDieEffect;
+    public ParticleController jetpackSmoke;
 
     [Header("-- Player Colliders --")]
     public PlayerCollider bodyCollider;
@@ -26,12 +26,10 @@ public class PlayerController : GameState
     private bool canDie;
     private bool beginFlyUp;
     private bool controllsEnabled;
-    private SpriteRenderer jetpackSmoke;
     private Animator m_animator;
     private Rigidbody2D m_rigidbody;
     private UIManager uiManager;
     private EnvironmentManager envManager;
-    private Tween smokeTween;
 
     #endregion
 
@@ -42,7 +40,6 @@ public class PlayerController : GameState
         // -- CACHING MAIN COMPONENTS
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_animator = GetComponentInChildren<Animator>();
-        jetpackSmoke = transform.GetChild(1).GetComponent<SpriteRenderer>();
 
         canDie = true;
         uiManager = _uiManager;
@@ -130,31 +127,27 @@ public class PlayerController : GameState
             return;
 
         controllsEnabled = false;
-        jetpackSmoke.enabled = false;
-        playerDieEffect.gameObject.SetActive(true);
+        jetpackSmoke.gameObject.SetActive(false);
         bodyCollider.CollisionDectection(false);
         shieldCollider.CollisionDectection(false);
         magnetCollider.CollisionDectection(false);
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.black;
         m_rigidbody.AddForce(transform.forward * 100f, ForceMode2D.Force);
-        AudioController.Instance.StopAudio(AudioName.JETPACK_SFX);
         GameSession.PlayerDied();
+
+        var dieEffect = PoolManager.Instance.GetFromPool("Player Die Effect");
+        dieEffect.transform.position = transform.position;
+        AudioController.Instance.StopAudio(AudioName.JETPACK_SFX);
     }
 
     private void PlayerSmoke(bool val)
     {
-        DOTween.Kill(smokeTween);
+        jetpackSmoke.Fade(val);
 
         if (val)
-        {
-            smokeTween = jetpackSmoke.DOFade(1, 0.5f);
             AudioController.Instance.PlayAudio(AudioName.JETPACK_SFX);
-        }
         else
-        {
-            smokeTween = jetpackSmoke.DOFade(0, 0.5f);
             AudioController.Instance.StopAudio(AudioName.JETPACK_SFX);
-        }
     }
 
     #endregion

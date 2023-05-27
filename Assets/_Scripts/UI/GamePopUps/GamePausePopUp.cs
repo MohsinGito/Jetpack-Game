@@ -11,6 +11,8 @@ public class GamePausePopUp : GamePopUp
 
     #region Public Attributes
 
+    public GameObject Bg;
+
     [Header("Puase PopUp Elements")]
     public ZoomInOutPopUp popUpAnim;
     public Button cancelButton;
@@ -42,11 +44,13 @@ public class GamePausePopUp : GamePopUp
     {
         SetUpPausePopUp();
         popUpAnim.Animate(true);
+        Bg.SetActive(true);
     }
 
     public override void Hide()
     {
         popUpAnim.Animate(false);
+        Bg.SetActive(false);
     }
 
     public override void SetAction(UnityAction _callback)

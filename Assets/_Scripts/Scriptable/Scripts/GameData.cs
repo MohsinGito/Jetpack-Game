@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities.Data;
 
 [CreateAssetMenu(fileName = "GameData", menuName = "SO/GameData")]
 public class GameData : ScriptableObject
@@ -39,7 +40,8 @@ public class GameData : ScriptableObject
         if(resetGame)
         {
             sessionCoins = 0;
-            gameEarnedCoins = 0;
+            gameEarnedCoins = DataController.Instance.Coins;
+
             selectedMap = new GameMap();
             selectedCharacter = new GameCharacter();
         }
@@ -53,7 +55,7 @@ public class GameData : ScriptableObject
         if (currentMapIndex == gameStages.Count)
             currentMapIndex = 0;
         
-        selectedMap = gameStages[currentMapIndex++];
+        selectedMap = gameStages[Random.Range(0, gameStages.Count)];
     }
 
     public ArrayLayout GetNewCoinsPattern()

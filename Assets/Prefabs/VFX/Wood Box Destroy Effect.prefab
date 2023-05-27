@@ -9375,8 +9375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 1
-  ForceFullyDeactivate: 0
-  DeactivateTime: 0
 --- !u!1 &2820487836770434926
 GameObject:
   m_ObjectHideFlags: 0
@@ -10192,7 +10190,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 3
-        scalar: 12
+        scalar: 1
         minScalar: 9
         maxCurve:
           serializedVersion: 2
@@ -10242,7 +10240,7 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 1
+      cycleCount: 0
       repeatInterval: 0.01
       probability: 1
   SizeModule:
